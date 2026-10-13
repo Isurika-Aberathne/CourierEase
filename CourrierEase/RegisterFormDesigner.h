@@ -272,9 +272,9 @@ namespace CourrierEase {
 			this->lblFeatures->Size = System::Drawing::Size(200, 120);
 			this->lblFeatures->TabIndex = 3;
 			this->lblFeatures->Text =
-				L"✓  Quick parcel booking\r\n\r\n"
-				L"✓  Delivery tracking\r\n\r\n"
-				L"✓  Delivery history";
+				L"\u2713  Quick parcel booking\r\n\r\n"
+				L"\u2713  Delivery tracking\r\n\r\n"
+				L"\u2713  Delivery history";
 
 			// 
 			// lblCustomerOnly
