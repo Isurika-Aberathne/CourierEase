@@ -339,32 +339,8 @@ cd CourierEase
 
 ---
 
-## 3. Configure Git Author
 
-If commits made from the new laptop should appear under the Isurika Aberathne GitHub account, run:
-
-```powershell
-git config --global user.name "Isurika Aberathne"
-git config --global user.email "isurika.aberathne2004@gmail.com"
-```
-
-Verify the configuration:
-
-```powershell
-git config --global user.name
-git config --global user.email
-```
-
-Expected output:
-
-```text
-Isurika Aberathne
-isurika.aberathne2004@gmail.com
-```
-
----
-
-## 4. Run the Automatic Database Setup
+## 3. Run the Automatic Database Setup
 
 The repository contains:
 
@@ -410,7 +386,7 @@ The setup script automatically:
 
 ---
 
-## 5. Example Database Setup
+## 4. Example Database Setup
 
 The setup may look similar to this:
 
@@ -445,7 +421,7 @@ Passwords are hidden while typing.
 
 ---
 
-## 6. MySQL Port Support
+## 5. MySQL Port Support
 
 CourierEase is not permanently tied to one MySQL port.
 
@@ -474,7 +450,7 @@ This allows CourierEase to run on computers using different MySQL ports without 
 
 ---
 
-## 7. Restart Visual Studio
+## 6. Restart Visual Studio
 
 After the setup script finishes:
 
@@ -485,7 +461,7 @@ This is required so Visual Studio can read the new environment variables.
 
 ---
 
-## 8. Open the Project
+## 7. Open the Project
 
 Open:
 
@@ -511,7 +487,7 @@ Do not rename the internal project or namespace because this may affect the Wind
 
 ---
 
-## 9. Build the Project
+## 8. Build the Project
 
 In Visual Studio select:
 
@@ -530,7 +506,7 @@ Wait until the build completes successfully.
 
 ---
 
-## 10. Run CourierEase
+## 9. Run CourierEase
 
 Press:
 
