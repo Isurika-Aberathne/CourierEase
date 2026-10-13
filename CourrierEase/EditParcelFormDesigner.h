@@ -45,7 +45,7 @@ namespace CourrierEase
 		int customerId;
 
 		System::Windows::Forms::Panel^ pnlHeader;
-		System::Windows::Forms::Panel^ pnlLogo;
+
 
 		System::Windows::Forms::Label^ lblBrand;
 		System::Windows::Forms::Label^ lblHeaderTitle;
@@ -106,7 +106,6 @@ namespace CourrierEase
 		void InitializeComponent(void)
 		{
 			this->pnlHeader = (gcnew System::Windows::Forms::Panel());
-			this->pnlLogo = (gcnew System::Windows::Forms::Panel());
 			this->lblBrand = (gcnew System::Windows::Forms::Label());
 			this->lblHeaderTitle = (gcnew System::Windows::Forms::Label());
 			this->lblBack = (gcnew System::Windows::Forms::Label());
@@ -149,7 +148,6 @@ namespace CourrierEase
 			// pnlHeader
 			// 
 			this->pnlHeader->BackColor = System::Drawing::Color::White;
-			this->pnlHeader->Controls->Add(this->pnlLogo);
 			this->pnlHeader->Controls->Add(this->lblBrand);
 			this->pnlHeader->Controls->Add(this->lblHeaderTitle);
 			this->pnlHeader->Controls->Add(this->lblBack);
@@ -159,117 +157,72 @@ namespace CourrierEase
 			this->pnlHeader->Size = System::Drawing::Size(1000, 70);
 			this->pnlHeader->TabIndex = 0;
 			// 
-			// pnlLogo
-			// 
-			this->pnlLogo->BackColor = System::Drawing::Color::FromArgb(
-				static_cast<System::Int32>(static_cast<System::Byte>(245)),
-				static_cast<System::Int32>(static_cast<System::Byte>(158)),
-				static_cast<System::Int32>(static_cast<System::Byte>(11)));
-			this->pnlLogo->Location = System::Drawing::Point(35, 20);
-			this->pnlLogo->Name = L"pnlLogo";
-			this->pnlLogo->Size = System::Drawing::Size(28, 28);
-			this->pnlLogo->TabIndex = 0;
-			// 
 			// lblBrand
 			// 
 			this->lblBrand->AutoSize = true;
-			this->lblBrand->Font =
-				(gcnew System::Drawing::Font(
-					L"Segoe UI",
-					12,
-					System::Drawing::FontStyle::Bold));
-			this->lblBrand->ForeColor =
-				System::Drawing::Color::FromArgb(15, 23, 42);
-			this->lblBrand->Location =
-				System::Drawing::Point(72, 21);
+			this->lblBrand->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold));
+			this->lblBrand->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(42)));
+			this->lblBrand->Location = System::Drawing::Point(12, 17);
 			this->lblBrand->Name = L"lblBrand";
-			this->lblBrand->Size =
-				System::Drawing::Size(123, 28);
+			this->lblBrand->Size = System::Drawing::Size(123, 28);
 			this->lblBrand->TabIndex = 1;
 			this->lblBrand->Text = L"CourierEase";
 			// 
 			// lblHeaderTitle
 			// 
 			this->lblHeaderTitle->AutoSize = true;
-			this->lblHeaderTitle->Font =
-				(gcnew System::Drawing::Font(
-					L"Segoe UI",
-					11,
-					System::Drawing::FontStyle::Bold));
-			this->lblHeaderTitle->ForeColor =
-				System::Drawing::Color::FromArgb(15, 23, 42);
-			this->lblHeaderTitle->Location =
-				System::Drawing::Point(430, 23);
+			this->lblHeaderTitle->Font = (gcnew System::Drawing::Font(L"Segoe UI", 11, System::Drawing::FontStyle::Bold));
+			this->lblHeaderTitle->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(42)));
+			this->lblHeaderTitle->Location = System::Drawing::Point(430, 23);
 			this->lblHeaderTitle->Name = L"lblHeaderTitle";
-			this->lblHeaderTitle->Size =
-				System::Drawing::Size(105, 25);
+			this->lblHeaderTitle->Size = System::Drawing::Size(105, 25);
 			this->lblHeaderTitle->TabIndex = 2;
 			this->lblHeaderTitle->Text = L"Edit Parcel";
 			// 
 			// lblBack
 			// 
 			this->lblBack->AutoSize = true;
-			this->lblBack->Cursor =
-				System::Windows::Forms::Cursors::Hand;
-			this->lblBack->Font =
-				(gcnew System::Drawing::Font(
-					L"Segoe UI",
-					9,
-					System::Drawing::FontStyle::Bold));
-			this->lblBack->ForeColor =
-				System::Drawing::Color::FromArgb(37, 99, 235);
-			this->lblBack->Location =
-				System::Drawing::Point(860, 25);
+			this->lblBack->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->lblBack->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, System::Drawing::FontStyle::Bold));
+			this->lblBack->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(37)), static_cast<System::Int32>(static_cast<System::Byte>(99)),
+				static_cast<System::Int32>(static_cast<System::Byte>(235)));
+			this->lblBack->Location = System::Drawing::Point(860, 25);
 			this->lblBack->Name = L"lblBack";
-			this->lblBack->Size =
-				System::Drawing::Size(57, 20);
+			this->lblBack->Size = System::Drawing::Size(57, 20);
 			this->lblBack->TabIndex = 3;
 			this->lblBack->Text = L"< Back";
-			this->lblBack->Click +=
-				gcnew System::EventHandler(
-					this,
-					&EditParcelFormDesigner::lblBack_Click);
+			this->lblBack->Click += gcnew System::EventHandler(this, &EditParcelFormDesigner::lblBack_Click);
 			// 
 			// lblTitle
 			// 
 			this->lblTitle->AutoSize = true;
-			this->lblTitle->Font =
-				(gcnew System::Drawing::Font(
-					L"Segoe UI",
-					20,
-					System::Drawing::FontStyle::Bold));
-			this->lblTitle->ForeColor =
-				System::Drawing::Color::FromArgb(15, 23, 42);
-			this->lblTitle->Location =
-				System::Drawing::Point(65, 100);
+			this->lblTitle->Font = (gcnew System::Drawing::Font(L"Segoe UI", 20, System::Drawing::FontStyle::Bold));
+			this->lblTitle->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(42)));
+			this->lblTitle->Location = System::Drawing::Point(65, 100);
 			this->lblTitle->Name = L"lblTitle";
-			this->lblTitle->Size =
-				System::Drawing::Size(187, 46);
+			this->lblTitle->Size = System::Drawing::Size(187, 46);
 			this->lblTitle->TabIndex = 1;
 			this->lblTitle->Text = L"Edit Parcel";
 			// 
 			// lblSubtitle
 			// 
 			this->lblSubtitle->AutoSize = true;
-			this->lblSubtitle->Font =
-				(gcnew System::Drawing::Font(L"Segoe UI", 9));
-			this->lblSubtitle->ForeColor =
-				System::Drawing::Color::FromArgb(100, 116, 139);
-			this->lblSubtitle->Location =
-				System::Drawing::Point(68, 148);
+			this->lblSubtitle->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9));
+			this->lblSubtitle->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(100)), static_cast<System::Int32>(static_cast<System::Byte>(116)),
+				static_cast<System::Int32>(static_cast<System::Byte>(139)));
+			this->lblSubtitle->Location = System::Drawing::Point(68, 148);
 			this->lblSubtitle->Name = L"lblSubtitle";
-			this->lblSubtitle->Size =
-				System::Drawing::Size(374, 20);
+			this->lblSubtitle->Size = System::Drawing::Size(374, 20);
 			this->lblSubtitle->TabIndex = 2;
-			this->lblSubtitle->Text =
-				L"Update the parcel information before it enters delivery.";
+			this->lblSubtitle->Text = L"Update the parcel information before it enters delivery.";
 			// 
 			// pnlForm
 			// 
-			this->pnlForm->BackColor =
-				System::Drawing::Color::White;
-			this->pnlForm->BorderStyle =
-				System::Windows::Forms::BorderStyle::FixedSingle;
+			this->pnlForm->BackColor = System::Drawing::Color::White;
+			this->pnlForm->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->pnlForm->Controls->Add(this->lblTrackingCaption);
 			this->pnlForm->Controls->Add(this->lblTrackingNo);
 			this->pnlForm->Controls->Add(this->lblReceiverName);
@@ -296,509 +249,316 @@ namespace CourrierEase
 			this->pnlForm->Controls->Add(this->lblEditNotice);
 			this->pnlForm->Controls->Add(this->btnSave);
 			this->pnlForm->Controls->Add(this->btnCancel);
-			this->pnlForm->Location =
-				System::Drawing::Point(70, 190);
+			this->pnlForm->Location = System::Drawing::Point(70, 190);
 			this->pnlForm->Name = L"pnlForm";
-			this->pnlForm->Size =
-				System::Drawing::Size(860, 600);
+			this->pnlForm->Size = System::Drawing::Size(860, 600);
 			this->pnlForm->TabIndex = 3;
 			// 
 			// lblTrackingCaption
 			// 
 			this->lblTrackingCaption->AutoSize = true;
-			this->lblTrackingCaption->Font =
-				(gcnew System::Drawing::Font(
-					L"Segoe UI",
-					9,
-					System::Drawing::FontStyle::Bold));
-			this->lblTrackingCaption->ForeColor =
-				System::Drawing::Color::FromArgb(100, 116, 139);
-			this->lblTrackingCaption->Location =
-				System::Drawing::Point(30, 25);
-			this->lblTrackingCaption->Name =
-				L"lblTrackingCaption";
-			this->lblTrackingCaption->Size =
-				System::Drawing::Size(97, 20);
+			this->lblTrackingCaption->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, System::Drawing::FontStyle::Bold));
+			this->lblTrackingCaption->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(100)),
+				static_cast<System::Int32>(static_cast<System::Byte>(116)), static_cast<System::Int32>(static_cast<System::Byte>(139)));
+			this->lblTrackingCaption->Location = System::Drawing::Point(30, 25);
+			this->lblTrackingCaption->Name = L"lblTrackingCaption";
+			this->lblTrackingCaption->Size = System::Drawing::Size(97, 20);
 			this->lblTrackingCaption->TabIndex = 0;
-			this->lblTrackingCaption->Text =
-				L"Tracking No.";
+			this->lblTrackingCaption->Text = L"Tracking No.";
 			// 
 			// lblTrackingNo
 			// 
 			this->lblTrackingNo->AutoSize = true;
-			this->lblTrackingNo->Font =
-				(gcnew System::Drawing::Font(
-					L"Segoe UI",
-					10,
-					System::Drawing::FontStyle::Bold));
-			this->lblTrackingNo->ForeColor =
-				System::Drawing::Color::FromArgb(37, 99, 235);
-			this->lblTrackingNo->Location =
-				System::Drawing::Point(145, 23);
+			this->lblTrackingNo->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10, System::Drawing::FontStyle::Bold));
+			this->lblTrackingNo->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(37)), static_cast<System::Int32>(static_cast<System::Byte>(99)),
+				static_cast<System::Int32>(static_cast<System::Byte>(235)));
+			this->lblTrackingNo->Location = System::Drawing::Point(145, 23);
 			this->lblTrackingNo->Name = L"lblTrackingNo";
-			this->lblTrackingNo->Size =
-				System::Drawing::Size(17, 23);
+			this->lblTrackingNo->Size = System::Drawing::Size(17, 23);
 			this->lblTrackingNo->TabIndex = 1;
 			this->lblTrackingNo->Text = L"-";
 			// 
 			// lblReceiverName
 			// 
 			this->lblReceiverName->AutoSize = true;
-			this->lblReceiverName->Font =
-				(gcnew System::Drawing::Font(
-					L"Segoe UI",
-					9,
-					System::Drawing::FontStyle::Bold));
-			this->lblReceiverName->Location =
-				System::Drawing::Point(30, 70);
-			this->lblReceiverName->Name =
-				L"lblReceiverName";
-			this->lblReceiverName->Size =
-				System::Drawing::Size(114, 20);
+			this->lblReceiverName->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, System::Drawing::FontStyle::Bold));
+			this->lblReceiverName->Location = System::Drawing::Point(30, 70);
+			this->lblReceiverName->Name = L"lblReceiverName";
+			this->lblReceiverName->Size = System::Drawing::Size(114, 20);
 			this->lblReceiverName->TabIndex = 2;
-			this->lblReceiverName->Text =
-				L"Receiver Name";
+			this->lblReceiverName->Text = L"Receiver Name";
 			// 
 			// txtReceiverName
 			// 
-			this->txtReceiverName->Location =
-				System::Drawing::Point(30, 95);
+			this->txtReceiverName->Location = System::Drawing::Point(30, 95);
 			this->txtReceiverName->MaxLength = 60;
-			this->txtReceiverName->Name =
-				L"txtReceiverName";
-			this->txtReceiverName->Size =
-				System::Drawing::Size(385, 27);
+			this->txtReceiverName->Name = L"txtReceiverName";
+			this->txtReceiverName->Size = System::Drawing::Size(385, 27);
 			this->txtReceiverName->TabIndex = 0;
 			// 
 			// lblReceiverPhone
 			// 
 			this->lblReceiverPhone->AutoSize = true;
-			this->lblReceiverPhone->Font =
-				(gcnew System::Drawing::Font(
-					L"Segoe UI",
-					9,
-					System::Drawing::FontStyle::Bold));
-			this->lblReceiverPhone->Location =
-				System::Drawing::Point(445, 70);
-			this->lblReceiverPhone->Name =
-				L"lblReceiverPhone";
-			this->lblReceiverPhone->Size =
-				System::Drawing::Size(116, 20);
+			this->lblReceiverPhone->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, System::Drawing::FontStyle::Bold));
+			this->lblReceiverPhone->Location = System::Drawing::Point(445, 70);
+			this->lblReceiverPhone->Name = L"lblReceiverPhone";
+			this->lblReceiverPhone->Size = System::Drawing::Size(116, 20);
 			this->lblReceiverPhone->TabIndex = 3;
-			this->lblReceiverPhone->Text =
-				L"Receiver Phone";
+			this->lblReceiverPhone->Text = L"Receiver Phone";
 			// 
 			// txtReceiverPhone
 			// 
-			this->txtReceiverPhone->Location =
-				System::Drawing::Point(445, 95);
+			this->txtReceiverPhone->Location = System::Drawing::Point(445, 95);
 			this->txtReceiverPhone->MaxLength = 15;
-			this->txtReceiverPhone->Name =
-				L"txtReceiverPhone";
-			this->txtReceiverPhone->Size =
-				System::Drawing::Size(380, 27);
+			this->txtReceiverPhone->Name = L"txtReceiverPhone";
+			this->txtReceiverPhone->Size = System::Drawing::Size(380, 27);
 			this->txtReceiverPhone->TabIndex = 1;
 			// 
 			// lblReceiverAddress
 			// 
 			this->lblReceiverAddress->AutoSize = true;
-			this->lblReceiverAddress->Font =
-				(gcnew System::Drawing::Font(
-					L"Segoe UI",
-					9,
-					System::Drawing::FontStyle::Bold));
-			this->lblReceiverAddress->Location =
-				System::Drawing::Point(30, 145);
-			this->lblReceiverAddress->Name =
-				L"lblReceiverAddress";
-			this->lblReceiverAddress->Size =
-				System::Drawing::Size(129, 20);
+			this->lblReceiverAddress->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, System::Drawing::FontStyle::Bold));
+			this->lblReceiverAddress->Location = System::Drawing::Point(30, 145);
+			this->lblReceiverAddress->Name = L"lblReceiverAddress";
+			this->lblReceiverAddress->Size = System::Drawing::Size(129, 20);
 			this->lblReceiverAddress->TabIndex = 4;
-			this->lblReceiverAddress->Text =
-				L"Receiver Address";
+			this->lblReceiverAddress->Text = L"Receiver Address";
 			// 
 			// txtReceiverAddress
 			// 
-			this->txtReceiverAddress->Location =
-				System::Drawing::Point(30, 170);
+			this->txtReceiverAddress->Location = System::Drawing::Point(30, 170);
 			this->txtReceiverAddress->MaxLength = 150;
-			this->txtReceiverAddress->Name =
-				L"txtReceiverAddress";
-			this->txtReceiverAddress->Size =
-				System::Drawing::Size(520, 27);
+			this->txtReceiverAddress->Name = L"txtReceiverAddress";
+			this->txtReceiverAddress->Size = System::Drawing::Size(520, 27);
 			this->txtReceiverAddress->TabIndex = 2;
 			// 
 			// lblReceiverCity
 			// 
 			this->lblReceiverCity->AutoSize = true;
-			this->lblReceiverCity->Font =
-				(gcnew System::Drawing::Font(
-					L"Segoe UI",
-					9,
-					System::Drawing::FontStyle::Bold));
-			this->lblReceiverCity->Location =
-				System::Drawing::Point(575, 145);
-			this->lblReceiverCity->Name =
-				L"lblReceiverCity";
-			this->lblReceiverCity->Size =
-				System::Drawing::Size(99, 20);
+			this->lblReceiverCity->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, System::Drawing::FontStyle::Bold));
+			this->lblReceiverCity->Location = System::Drawing::Point(575, 145);
+			this->lblReceiverCity->Name = L"lblReceiverCity";
+			this->lblReceiverCity->Size = System::Drawing::Size(99, 20);
 			this->lblReceiverCity->TabIndex = 5;
-			this->lblReceiverCity->Text =
-				L"Receiver City";
+			this->lblReceiverCity->Text = L"Receiver City";
 			// 
 			// txtReceiverCity
 			// 
-			this->txtReceiverCity->Location =
-				System::Drawing::Point(575, 170);
+			this->txtReceiverCity->Location = System::Drawing::Point(575, 170);
 			this->txtReceiverCity->MaxLength = 50;
-			this->txtReceiverCity->Name =
-				L"txtReceiverCity";
-			this->txtReceiverCity->Size =
-				System::Drawing::Size(250, 27);
+			this->txtReceiverCity->Name = L"txtReceiverCity";
+			this->txtReceiverCity->Size = System::Drawing::Size(250, 27);
 			this->txtReceiverCity->TabIndex = 3;
 			// 
 			// lblDescription
 			// 
 			this->lblDescription->AutoSize = true;
-			this->lblDescription->Font =
-				(gcnew System::Drawing::Font(
-					L"Segoe UI",
-					9,
-					System::Drawing::FontStyle::Bold));
-			this->lblDescription->Location =
-				System::Drawing::Point(30, 220);
-			this->lblDescription->Name =
-				L"lblDescription";
-			this->lblDescription->Size =
-				System::Drawing::Size(89, 20);
+			this->lblDescription->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, System::Drawing::FontStyle::Bold));
+			this->lblDescription->Location = System::Drawing::Point(30, 220);
+			this->lblDescription->Name = L"lblDescription";
+			this->lblDescription->Size = System::Drawing::Size(89, 20);
 			this->lblDescription->TabIndex = 6;
 			this->lblDescription->Text = L"Description";
 			// 
 			// txtDescription
 			// 
-			this->txtDescription->Location =
-				System::Drawing::Point(30, 245);
+			this->txtDescription->Location = System::Drawing::Point(30, 245);
 			this->txtDescription->MaxLength = 120;
-			this->txtDescription->Name =
-				L"txtDescription";
-			this->txtDescription->Size =
-				System::Drawing::Size(795, 27);
+			this->txtDescription->Name = L"txtDescription";
+			this->txtDescription->Size = System::Drawing::Size(795, 27);
 			this->txtDescription->TabIndex = 4;
 			// 
 			// lblWeight
 			// 
 			this->lblWeight->AutoSize = true;
-			this->lblWeight->Font =
-				(gcnew System::Drawing::Font(
-					L"Segoe UI",
-					9,
-					System::Drawing::FontStyle::Bold));
-			this->lblWeight->Location =
-				System::Drawing::Point(30, 295);
+			this->lblWeight->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, System::Drawing::FontStyle::Bold));
+			this->lblWeight->Location = System::Drawing::Point(30, 295);
 			this->lblWeight->Name = L"lblWeight";
-			this->lblWeight->Size =
-				System::Drawing::Size(93, 20);
+			this->lblWeight->Size = System::Drawing::Size(93, 20);
 			this->lblWeight->TabIndex = 7;
 			this->lblWeight->Text = L"Weight (kg)";
 			// 
 			// txtWeight
 			// 
-			this->txtWeight->Location =
-				System::Drawing::Point(30, 320);
+			this->txtWeight->Location = System::Drawing::Point(30, 320);
 			this->txtWeight->Name = L"txtWeight";
-			this->txtWeight->Size =
-				System::Drawing::Size(235, 27);
+			this->txtWeight->Size = System::Drawing::Size(235, 27);
 			this->txtWeight->TabIndex = 5;
-			this->txtWeight->TextChanged +=
-				gcnew System::EventHandler(
-					this,
-					&EditParcelFormDesigner::txtWeight_TextChanged);
+			this->txtWeight->TextChanged += gcnew System::EventHandler(this, &EditParcelFormDesigner::txtWeight_TextChanged);
 			// 
 			// lblParcelType
 			// 
 			this->lblParcelType->AutoSize = true;
-			this->lblParcelType->Font =
-				(gcnew System::Drawing::Font(
-					L"Segoe UI",
-					9,
-					System::Drawing::FontStyle::Bold));
-			this->lblParcelType->Location =
-				System::Drawing::Point(295, 295);
-			this->lblParcelType->Name =
-				L"lblParcelType";
-			this->lblParcelType->Size =
-				System::Drawing::Size(88, 20);
+			this->lblParcelType->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, System::Drawing::FontStyle::Bold));
+			this->lblParcelType->Location = System::Drawing::Point(295, 295);
+			this->lblParcelType->Name = L"lblParcelType";
+			this->lblParcelType->Size = System::Drawing::Size(88, 20);
 			this->lblParcelType->TabIndex = 8;
 			this->lblParcelType->Text = L"Parcel Type";
 			// 
 			// cmbParcelType
 			// 
-			this->cmbParcelType->DropDownStyle =
-				System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->cmbParcelType->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->cmbParcelType->FormattingEnabled = true;
-			this->cmbParcelType->Items->AddRange(
-				gcnew cli::array<System::Object^>(4)
-			{
-				L"Document",
-					L"Package",
-					L"Fragile",
-					L"Other"
-			});
-			this->cmbParcelType->Location =
-				System::Drawing::Point(295, 320);
-			this->cmbParcelType->Name =
-				L"cmbParcelType";
-			this->cmbParcelType->Size =
-				System::Drawing::Size(235, 28);
+			this->cmbParcelType->Items->AddRange(gcnew cli::array< System::Object^  >(4) { L"Document", L"Package", L"Fragile", L"Other" });
+			this->cmbParcelType->Location = System::Drawing::Point(295, 320);
+			this->cmbParcelType->Name = L"cmbParcelType";
+			this->cmbParcelType->Size = System::Drawing::Size(235, 28);
 			this->cmbParcelType->TabIndex = 6;
 			// 
 			// lblDeclaredValue
 			// 
 			this->lblDeclaredValue->AutoSize = true;
-			this->lblDeclaredValue->Font =
-				(gcnew System::Drawing::Font(
-					L"Segoe UI",
-					9,
-					System::Drawing::FontStyle::Bold));
-			this->lblDeclaredValue->Location =
-				System::Drawing::Point(560, 295);
-			this->lblDeclaredValue->Name =
-				L"lblDeclaredValue";
-			this->lblDeclaredValue->Size =
-				System::Drawing::Size(156, 20);
+			this->lblDeclaredValue->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, System::Drawing::FontStyle::Bold));
+			this->lblDeclaredValue->Location = System::Drawing::Point(560, 295);
+			this->lblDeclaredValue->Name = L"lblDeclaredValue";
+			this->lblDeclaredValue->Size = System::Drawing::Size(156, 20);
 			this->lblDeclaredValue->TabIndex = 9;
-			this->lblDeclaredValue->Text =
-				L"Declared Value (LKR)";
+			this->lblDeclaredValue->Text = L"Declared Value (LKR)";
 			// 
 			// txtDeclaredValue
 			// 
-			this->txtDeclaredValue->Location =
-				System::Drawing::Point(560, 320);
-			this->txtDeclaredValue->Name =
-				L"txtDeclaredValue";
-			this->txtDeclaredValue->Size =
-				System::Drawing::Size(265, 27);
+			this->txtDeclaredValue->Location = System::Drawing::Point(560, 320);
+			this->txtDeclaredValue->Name = L"txtDeclaredValue";
+			this->txtDeclaredValue->Size = System::Drawing::Size(265, 27);
 			this->txtDeclaredValue->TabIndex = 7;
 			// 
 			// lblDeliveryOption
 			// 
 			this->lblDeliveryOption->AutoSize = true;
-			this->lblDeliveryOption->Font =
-				(gcnew System::Drawing::Font(
-					L"Segoe UI",
-					9,
-					System::Drawing::FontStyle::Bold));
-			this->lblDeliveryOption->Location =
-				System::Drawing::Point(30, 370);
-			this->lblDeliveryOption->Name =
-				L"lblDeliveryOption";
-			this->lblDeliveryOption->Size =
-				System::Drawing::Size(119, 20);
+			this->lblDeliveryOption->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, System::Drawing::FontStyle::Bold));
+			this->lblDeliveryOption->Location = System::Drawing::Point(30, 370);
+			this->lblDeliveryOption->Name = L"lblDeliveryOption";
+			this->lblDeliveryOption->Size = System::Drawing::Size(119, 20);
 			this->lblDeliveryOption->TabIndex = 10;
-			this->lblDeliveryOption->Text =
-				L"Delivery Option";
+			this->lblDeliveryOption->Text = L"Delivery Option";
 			// 
 			// cmbDeliveryOption
 			// 
-			this->cmbDeliveryOption->DropDownStyle =
-				System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->cmbDeliveryOption->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->cmbDeliveryOption->FormattingEnabled = true;
-			this->cmbDeliveryOption->Items->AddRange(
-				gcnew cli::array<System::Object^>(2)
-			{
-				L"Standard",
-					L"Express"
-			});
-			this->cmbDeliveryOption->Location =
-				System::Drawing::Point(30, 395);
-			this->cmbDeliveryOption->Name =
-				L"cmbDeliveryOption";
-			this->cmbDeliveryOption->Size =
-				System::Drawing::Size(235, 28);
+			this->cmbDeliveryOption->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Standard", L"Express" });
+			this->cmbDeliveryOption->Location = System::Drawing::Point(30, 395);
+			this->cmbDeliveryOption->Name = L"cmbDeliveryOption";
+			this->cmbDeliveryOption->Size = System::Drawing::Size(235, 28);
 			this->cmbDeliveryOption->TabIndex = 8;
-			this->cmbDeliveryOption->SelectedIndexChanged +=
-				gcnew System::EventHandler(
-					this,
-					&EditParcelFormDesigner::
-					cmbDeliveryOption_SelectedIndexChanged);
+			this->cmbDeliveryOption->SelectedIndexChanged += gcnew System::EventHandler(this, &EditParcelFormDesigner::cmbDeliveryOption_SelectedIndexChanged);
 			// 
 			// lblPickupAddress
 			// 
 			this->lblPickupAddress->AutoSize = true;
-			this->lblPickupAddress->Font =
-				(gcnew System::Drawing::Font(
-					L"Segoe UI",
-					9,
-					System::Drawing::FontStyle::Bold));
-			this->lblPickupAddress->Location =
-				System::Drawing::Point(295, 370);
-			this->lblPickupAddress->Name =
-				L"lblPickupAddress";
-			this->lblPickupAddress->Size =
-				System::Drawing::Size(116, 20);
+			this->lblPickupAddress->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, System::Drawing::FontStyle::Bold));
+			this->lblPickupAddress->Location = System::Drawing::Point(295, 370);
+			this->lblPickupAddress->Name = L"lblPickupAddress";
+			this->lblPickupAddress->Size = System::Drawing::Size(116, 20);
 			this->lblPickupAddress->TabIndex = 11;
-			this->lblPickupAddress->Text =
-				L"Pickup Address";
+			this->lblPickupAddress->Text = L"Pickup Address";
 			// 
 			// txtPickupAddress
 			// 
-			this->txtPickupAddress->Location =
-				System::Drawing::Point(295, 395);
+			this->txtPickupAddress->Location = System::Drawing::Point(295, 395);
 			this->txtPickupAddress->MaxLength = 150;
-			this->txtPickupAddress->Name =
-				L"txtPickupAddress";
-			this->txtPickupAddress->Size =
-				System::Drawing::Size(530, 27);
+			this->txtPickupAddress->Name = L"txtPickupAddress";
+			this->txtPickupAddress->Size = System::Drawing::Size(530, 27);
 			this->txtPickupAddress->TabIndex = 9;
 			// 
 			// pnlCharge
 			// 
-			this->pnlCharge->BackColor =
-				System::Drawing::Color::FromArgb(239, 246, 255);
-			this->pnlCharge->Controls->Add(
-				this->lblChargeTitle);
-			this->pnlCharge->Controls->Add(
-				this->lblCharge);
-			this->pnlCharge->Location =
-				System::Drawing::Point(30, 450);
+			this->pnlCharge->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(239)), static_cast<System::Int32>(static_cast<System::Byte>(246)),
+				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->pnlCharge->Controls->Add(this->lblChargeTitle);
+			this->pnlCharge->Controls->Add(this->lblCharge);
+			this->pnlCharge->Location = System::Drawing::Point(30, 450);
 			this->pnlCharge->Name = L"pnlCharge";
-			this->pnlCharge->Size =
-				System::Drawing::Size(250, 60);
+			this->pnlCharge->Size = System::Drawing::Size(250, 60);
 			this->pnlCharge->TabIndex = 12;
 			// 
 			// lblChargeTitle
 			// 
 			this->lblChargeTitle->AutoSize = true;
-			this->lblChargeTitle->Font =
-				(gcnew System::Drawing::Font(
-					L"Segoe UI",
-					8));
-			this->lblChargeTitle->ForeColor =
-				System::Drawing::Color::FromArgb(100, 116, 139);
-			this->lblChargeTitle->Location =
-				System::Drawing::Point(15, 8);
-			this->lblChargeTitle->Name =
-				L"lblChargeTitle";
-			this->lblChargeTitle->Size =
-				System::Drawing::Size(106, 19);
+			this->lblChargeTitle->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8));
+			this->lblChargeTitle->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(100)), static_cast<System::Int32>(static_cast<System::Byte>(116)),
+				static_cast<System::Int32>(static_cast<System::Byte>(139)));
+			this->lblChargeTitle->Location = System::Drawing::Point(15, 8);
+			this->lblChargeTitle->Name = L"lblChargeTitle";
+			this->lblChargeTitle->Size = System::Drawing::Size(106, 19);
 			this->lblChargeTitle->TabIndex = 0;
-			this->lblChargeTitle->Text =
-				L"Delivery Charge";
+			this->lblChargeTitle->Text = L"Delivery Charge";
 			// 
 			// lblCharge
 			// 
 			this->lblCharge->AutoSize = true;
-			this->lblCharge->Font =
-				(gcnew System::Drawing::Font(
-					L"Segoe UI",
-					12,
-					System::Drawing::FontStyle::Bold));
-			this->lblCharge->ForeColor =
-				System::Drawing::Color::FromArgb(37, 99, 235);
-			this->lblCharge->Location =
-				System::Drawing::Point(15, 28);
+			this->lblCharge->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold));
+			this->lblCharge->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(37)), static_cast<System::Int32>(static_cast<System::Byte>(99)),
+				static_cast<System::Int32>(static_cast<System::Byte>(235)));
+			this->lblCharge->Location = System::Drawing::Point(15, 28);
 			this->lblCharge->Name = L"lblCharge";
-			this->lblCharge->Size =
-				System::Drawing::Size(95, 28);
+			this->lblCharge->Size = System::Drawing::Size(95, 28);
 			this->lblCharge->TabIndex = 1;
 			this->lblCharge->Text = L"LKR 0.00";
 			// 
 			// lblEditNotice
 			// 
-			this->lblEditNotice->Font =
-				(gcnew System::Drawing::Font(
-					L"Segoe UI",
-					8));
-			this->lblEditNotice->ForeColor =
-				System::Drawing::Color::FromArgb(100, 116, 139);
-			this->lblEditNotice->Location =
-				System::Drawing::Point(310, 450);
-			this->lblEditNotice->Name =
-				L"lblEditNotice";
-			this->lblEditNotice->Size =
-				System::Drawing::Size(515, 55);
+			this->lblEditNotice->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8));
+			this->lblEditNotice->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(100)), static_cast<System::Int32>(static_cast<System::Byte>(116)),
+				static_cast<System::Int32>(static_cast<System::Byte>(139)));
+			this->lblEditNotice->Location = System::Drawing::Point(310, 450);
+			this->lblEditNotice->Name = L"lblEditNotice";
+			this->lblEditNotice->Size = System::Drawing::Size(515, 55);
 			this->lblEditNotice->TabIndex = 13;
-			this->lblEditNotice->Text =
-				L"Only parcels with the status \"Order Placed\" can be edited. "
-				L"The delivery charge is recalculated when the weight or "
-				L"delivery option changes.";
+			this->lblEditNotice->Text = L"Only parcels with the status \"Order Placed\" can be edited. The delivery charge is"
+				L" recalculated when the weight or delivery option changes.";
 			// 
 			// btnSave
 			// 
-			this->btnSave->BackColor =
-				System::Drawing::Color::FromArgb(37, 99, 235);
-			this->btnSave->Cursor =
-				System::Windows::Forms::Cursors::Hand;
+			this->btnSave->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(37)), static_cast<System::Int32>(static_cast<System::Byte>(99)),
+				static_cast<System::Int32>(static_cast<System::Byte>(235)));
+			this->btnSave->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->btnSave->FlatAppearance->BorderSize = 0;
-			this->btnSave->FlatStyle =
-				System::Windows::Forms::FlatStyle::Flat;
-			this->btnSave->Font =
-				(gcnew System::Drawing::Font(
-					L"Segoe UI",
-					9,
-					System::Drawing::FontStyle::Bold));
-			this->btnSave->ForeColor =
-				System::Drawing::Color::White;
-			this->btnSave->Location =
-				System::Drawing::Point(635, 535);
+			this->btnSave->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnSave->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, System::Drawing::FontStyle::Bold));
+			this->btnSave->ForeColor = System::Drawing::Color::White;
+			this->btnSave->Location = System::Drawing::Point(635, 535);
 			this->btnSave->Name = L"btnSave";
-			this->btnSave->Size =
-				System::Drawing::Size(190, 40);
+			this->btnSave->Size = System::Drawing::Size(190, 40);
 			this->btnSave->TabIndex = 10;
 			this->btnSave->Text = L"Save Changes";
 			this->btnSave->UseVisualStyleBackColor = false;
-			this->btnSave->Click +=
-				gcnew System::EventHandler(
-					this,
-					&EditParcelFormDesigner::btnSave_Click);
+			this->btnSave->Click += gcnew System::EventHandler(this, &EditParcelFormDesigner::btnSave_Click);
 			// 
 			// btnCancel
 			// 
-			this->btnCancel->BackColor =
-				System::Drawing::Color::White;
-			this->btnCancel->Cursor =
-				System::Windows::Forms::Cursors::Hand;
-			this->btnCancel->FlatAppearance->BorderColor =
-				System::Drawing::Color::FromArgb(148, 163, 184);
-			this->btnCancel->FlatStyle =
-				System::Windows::Forms::FlatStyle::Flat;
-			this->btnCancel->ForeColor =
-				System::Drawing::Color::FromArgb(51, 65, 85);
-			this->btnCancel->Location =
-				System::Drawing::Point(500, 535);
+			this->btnCancel->BackColor = System::Drawing::Color::White;
+			this->btnCancel->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnCancel->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(148)),
+				static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(184)));
+			this->btnCancel->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnCancel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(65)),
+				static_cast<System::Int32>(static_cast<System::Byte>(85)));
+			this->btnCancel->Location = System::Drawing::Point(500, 535);
 			this->btnCancel->Name = L"btnCancel";
-			this->btnCancel->Size =
-				System::Drawing::Size(120, 40);
+			this->btnCancel->Size = System::Drawing::Size(120, 40);
 			this->btnCancel->TabIndex = 11;
 			this->btnCancel->Text = L"Cancel";
 			this->btnCancel->UseVisualStyleBackColor = false;
-			this->btnCancel->Click +=
-				gcnew System::EventHandler(
-					this,
-					&EditParcelFormDesigner::btnCancel_Click);
+			this->btnCancel->Click += gcnew System::EventHandler(this, &EditParcelFormDesigner::btnCancel_Click);
 			// 
 			// EditParcelFormDesigner
 			// 
-			this->AutoScaleDimensions =
-				System::Drawing::SizeF(8, 20);
-			this->AutoScaleMode =
-				System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor =
-				System::Drawing::Color::FromArgb(248, 250, 252);
-			this->ClientSize =
-				System::Drawing::Size(1000, 830);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 20);
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(248)), static_cast<System::Int32>(static_cast<System::Byte>(250)),
+				static_cast<System::Int32>(static_cast<System::Byte>(252)));
+			this->ClientSize = System::Drawing::Size(1000, 830);
 			this->Controls->Add(this->pnlHeader);
 			this->Controls->Add(this->lblTitle);
 			this->Controls->Add(this->lblSubtitle);
 			this->Controls->Add(this->pnlForm);
-			this->Font =
-				(gcnew System::Drawing::Font(L"Segoe UI", 9));
-			this->FormBorderStyle =
-				System::Windows::Forms::FormBorderStyle::FixedSingle;
+			this->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9));
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->MaximizeBox = false;
 			this->Name = L"EditParcelFormDesigner";
-			this->StartPosition =
-				System::Windows::Forms::FormStartPosition::CenterParent;
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterParent;
 			this->Text = L"CourierEase - Edit Parcel";
 			this->pnlHeader->ResumeLayout(false);
 			this->pnlHeader->PerformLayout();
@@ -808,6 +568,7 @@ namespace CourrierEase
 			this->pnlCharge->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
+
 		}
 
 #pragma endregion

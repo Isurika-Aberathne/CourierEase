@@ -54,7 +54,7 @@ namespace CourrierEase
 		System::String^ customerName;
 
 		System::Windows::Forms::Panel^ pnlSidebar;
-		System::Windows::Forms::Panel^ pnlLogo;
+
 		System::Windows::Forms::Panel^ pnlAvatar;
 		System::Windows::Forms::Panel^ pnlHeader;
 		System::Windows::Forms::Panel^ pnlContent;
@@ -99,116 +99,41 @@ namespace CourrierEase
 
 		void InitializeComponent(void)
 		{
-			this->pnlSidebar =
-				(gcnew System::Windows::Forms::Panel());
-
-			this->pnlLogo =
-				(gcnew System::Windows::Forms::Panel());
-
-			this->lblBrand =
-				(gcnew System::Windows::Forms::Label());
-
-			this->lblCustomerSection =
-				(gcnew System::Windows::Forms::Label());
-
-			this->btnDashboard =
-				(gcnew System::Windows::Forms::Button());
-
-			this->btnBookParcel =
-				(gcnew System::Windows::Forms::Button());
-
-			this->btnMyDeliveries =
-				(gcnew System::Windows::Forms::Button());
-
-			this->btnMyProfile =
-				(gcnew System::Windows::Forms::Button());
-
-			this->btnLogout =
-				(gcnew System::Windows::Forms::Button());
-
-			this->pnlAvatar =
-				(gcnew System::Windows::Forms::Panel());
-
-			this->lblAvatar =
-				(gcnew System::Windows::Forms::Label());
-
-			this->pnlHeader =
-				(gcnew System::Windows::Forms::Panel());
-
-			this->lblHeaderTitle =
-				(gcnew System::Windows::Forms::Label());
-
-			this->lblHeaderCustomer =
-				(gcnew System::Windows::Forms::Label());
-
-			this->pnlContent =
-				(gcnew System::Windows::Forms::Panel());
-
-			this->lblTitle =
-				(gcnew System::Windows::Forms::Label());
-
-			this->lblSubtitle =
-				(gcnew System::Windows::Forms::Label());
-
-			this->lblCount =
-				(gcnew System::Windows::Forms::Label());
-
-			this->btnRefresh =
-				(gcnew System::Windows::Forms::Button());
-
-			this->pnlTable =
-				(gcnew System::Windows::Forms::Panel());
-
-			this->dgvDeliveries =
-				(gcnew System::Windows::Forms::DataGridView());
-
-			this->colParcelId =
-				(gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-
-			this->colTracking =
-				(gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-
-			this->colReceiver =
-				(gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-
-			this->colService =
-				(gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-
-			this->colCharge =
-				(gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-
-			this->colStatus =
-				(gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-
-			this->colDate =
-				(gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-
-			this->colView =
-				(gcnew System::Windows::Forms::DataGridViewButtonColumn());
-
-			this->colEdit =
-				(gcnew System::Windows::Forms::DataGridViewButtonColumn());
-
-			this->colCancel =
-				(gcnew System::Windows::Forms::DataGridViewButtonColumn());
-
+			this->pnlSidebar = (gcnew System::Windows::Forms::Panel());
+			this->lblBrand = (gcnew System::Windows::Forms::Label());
+			this->lblCustomerSection = (gcnew System::Windows::Forms::Label());
+			this->btnDashboard = (gcnew System::Windows::Forms::Button());
+			this->btnBookParcel = (gcnew System::Windows::Forms::Button());
+			this->btnMyDeliveries = (gcnew System::Windows::Forms::Button());
+			this->btnMyProfile = (gcnew System::Windows::Forms::Button());
+			this->btnLogout = (gcnew System::Windows::Forms::Button());
+			this->pnlAvatar = (gcnew System::Windows::Forms::Panel());
+			this->lblAvatar = (gcnew System::Windows::Forms::Label());
+			this->pnlHeader = (gcnew System::Windows::Forms::Panel());
+			this->lblHeaderTitle = (gcnew System::Windows::Forms::Label());
+			this->lblHeaderCustomer = (gcnew System::Windows::Forms::Label());
+			this->pnlContent = (gcnew System::Windows::Forms::Panel());
+			this->lblTitle = (gcnew System::Windows::Forms::Label());
+			this->lblSubtitle = (gcnew System::Windows::Forms::Label());
+			this->lblCount = (gcnew System::Windows::Forms::Label());
+			this->btnRefresh = (gcnew System::Windows::Forms::Button());
+			this->pnlTable = (gcnew System::Windows::Forms::Panel());
+			this->dgvDeliveries = (gcnew System::Windows::Forms::DataGridView());
+			this->colView = (gcnew System::Windows::Forms::DataGridViewButtonColumn());
+			this->colEdit = (gcnew System::Windows::Forms::DataGridViewButtonColumn());
+			this->colCancel = (gcnew System::Windows::Forms::DataGridViewButtonColumn());
 			this->pnlSidebar->SuspendLayout();
 			this->pnlAvatar->SuspendLayout();
 			this->pnlHeader->SuspendLayout();
 			this->pnlContent->SuspendLayout();
 			this->pnlTable->SuspendLayout();
-
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(
-				this->dgvDeliveries))->BeginInit();
-
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvDeliveries))->BeginInit();
 			this->SuspendLayout();
-
+			// 
 			// pnlSidebar
-
-			this->pnlSidebar->BackColor =
-				System::Drawing::Color::FromArgb(15, 23, 42);
-
-			this->pnlSidebar->Controls->Add(this->pnlLogo);
+			// 
+			this->pnlSidebar->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(42)));
 			this->pnlSidebar->Controls->Add(this->lblBrand);
 			this->pnlSidebar->Controls->Add(this->lblCustomerSection);
 			this->pnlSidebar->Controls->Add(this->btnDashboard);
@@ -216,850 +141,286 @@ namespace CourrierEase
 			this->pnlSidebar->Controls->Add(this->btnMyDeliveries);
 			this->pnlSidebar->Controls->Add(this->btnMyProfile);
 			this->pnlSidebar->Controls->Add(this->btnLogout);
-
-			this->pnlSidebar->Dock =
-				System::Windows::Forms::DockStyle::Left;
-
-			this->pnlSidebar->Location =
-				System::Drawing::Point(0, 0);
-
-			this->pnlSidebar->Name =
-				L"pnlSidebar";
-
-			this->pnlSidebar->Size =
-				System::Drawing::Size(205, 700);
-
+			this->pnlSidebar->Dock = System::Windows::Forms::DockStyle::Left;
+			this->pnlSidebar->Location = System::Drawing::Point(0, 0);
+			this->pnlSidebar->Name = L"pnlSidebar";
+			this->pnlSidebar->Size = System::Drawing::Size(205, 700);
 			this->pnlSidebar->TabIndex = 0;
-
-			// pnlLogo
-
-			this->pnlLogo->BackColor =
-				System::Drawing::Color::FromArgb(245, 158, 11);
-
-			this->pnlLogo->Location =
-				System::Drawing::Point(25, 22);
-
-			this->pnlLogo->Name =
-				L"pnlLogo";
-
-			this->pnlLogo->Size =
-				System::Drawing::Size(25, 25);
-
-			this->pnlLogo->TabIndex = 0;
-
+			// 
 			// lblBrand
-
-			this->lblBrand->Font =
-				(gcnew System::Drawing::Font(
-					L"Segoe UI",
-					12,
-					System::Drawing::FontStyle::Bold));
-
-			this->lblBrand->ForeColor =
-				System::Drawing::Color::White;
-
-			this->lblBrand->Location =
-				System::Drawing::Point(60, 21);
-
-			this->lblBrand->Name =
-				L"lblBrand";
-
-			this->lblBrand->Size =
-				System::Drawing::Size(130, 28);
-
+			// 
+			this->lblBrand->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold));
+			this->lblBrand->ForeColor = System::Drawing::Color::White;
+			this->lblBrand->Location = System::Drawing::Point(24, 21);
+			this->lblBrand->Name = L"lblBrand";
+			this->lblBrand->Size = System::Drawing::Size(130, 28);
 			this->lblBrand->TabIndex = 1;
-
-			this->lblBrand->Text =
-				L"CourierEase";
-
+			this->lblBrand->Text = L"CourierEase";
+			// 
 			// lblCustomerSection
-
-			this->lblCustomerSection->Font =
-				(gcnew System::Drawing::Font(
-					L"Segoe UI",
-					8));
-
-			this->lblCustomerSection->ForeColor =
-				System::Drawing::Color::FromArgb(
-					148,
-					163,
-					184);
-
-			this->lblCustomerSection->Location =
-				System::Drawing::Point(25, 70);
-
-			this->lblCustomerSection->Name =
-				L"lblCustomerSection";
-
-			this->lblCustomerSection->Size =
-				System::Drawing::Size(130, 20);
-
+			// 
+			this->lblCustomerSection->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8));
+			this->lblCustomerSection->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(148)),
+				static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(184)));
+			this->lblCustomerSection->Location = System::Drawing::Point(25, 70);
+			this->lblCustomerSection->Name = L"lblCustomerSection";
+			this->lblCustomerSection->Size = System::Drawing::Size(130, 20);
 			this->lblCustomerSection->TabIndex = 2;
-
-			this->lblCustomerSection->Text =
-				L"CUSTOMER";
-
+			this->lblCustomerSection->Text = L"CUSTOMER";
+			// 
 			// btnDashboard
-
-			this->btnDashboard->BackColor =
-				System::Drawing::Color::FromArgb(
-					15,
-					23,
-					42);
-
-			this->btnDashboard->Cursor =
-				System::Windows::Forms::Cursors::Hand;
-
+			// 
+			this->btnDashboard->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(42)));
+			this->btnDashboard->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->btnDashboard->FlatAppearance->BorderSize = 0;
-
-			this->btnDashboard->FlatStyle =
-				System::Windows::Forms::FlatStyle::Flat;
-
-			this->btnDashboard->Font =
-				(gcnew System::Drawing::Font(
-					L"Segoe UI",
-					9));
-
-			this->btnDashboard->ForeColor =
-				System::Drawing::Color::White;
-
-			this->btnDashboard->Location =
-				System::Drawing::Point(20, 100);
-
-			this->btnDashboard->Name =
-				L"btnDashboard";
-
-			this->btnDashboard->Size =
-				System::Drawing::Size(165, 38);
-
+			this->btnDashboard->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnDashboard->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9));
+			this->btnDashboard->ForeColor = System::Drawing::Color::White;
+			this->btnDashboard->Location = System::Drawing::Point(20, 100);
+			this->btnDashboard->Name = L"btnDashboard";
+			this->btnDashboard->Size = System::Drawing::Size(165, 38);
 			this->btnDashboard->TabIndex = 0;
-
-			this->btnDashboard->Text =
-				L"Dashboard";
-
-			this->btnDashboard->TextAlign =
-				System::Drawing::ContentAlignment::MiddleLeft;
-
+			this->btnDashboard->Text = L"Dashboard";
+			this->btnDashboard->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnDashboard->UseVisualStyleBackColor = false;
-
-			this->btnDashboard->Click +=
-				gcnew System::EventHandler(
-					this,
-					&MyDeliveriesFormDesigner::btnDashboard_Click);
-
+			this->btnDashboard->Click += gcnew System::EventHandler(this, &MyDeliveriesFormDesigner::btnDashboard_Click);
+			// 
 			// btnBookParcel
-
-			this->btnBookParcel->BackColor =
-				System::Drawing::Color::FromArgb(
-					15,
-					23,
-					42);
-
-			this->btnBookParcel->Cursor =
-				System::Windows::Forms::Cursors::Hand;
-
+			// 
+			this->btnBookParcel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(42)));
+			this->btnBookParcel->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->btnBookParcel->FlatAppearance->BorderSize = 0;
-
-			this->btnBookParcel->FlatStyle =
-				System::Windows::Forms::FlatStyle::Flat;
-
-			this->btnBookParcel->Font =
-				(gcnew System::Drawing::Font(
-					L"Segoe UI",
-					9));
-
-			this->btnBookParcel->ForeColor =
-				System::Drawing::Color::White;
-
-			this->btnBookParcel->Location =
-				System::Drawing::Point(20, 143);
-
-			this->btnBookParcel->Name =
-				L"btnBookParcel";
-
-			this->btnBookParcel->Size =
-				System::Drawing::Size(165, 38);
-
+			this->btnBookParcel->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnBookParcel->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9));
+			this->btnBookParcel->ForeColor = System::Drawing::Color::White;
+			this->btnBookParcel->Location = System::Drawing::Point(20, 143);
+			this->btnBookParcel->Name = L"btnBookParcel";
+			this->btnBookParcel->Size = System::Drawing::Size(165, 38);
 			this->btnBookParcel->TabIndex = 1;
-
-			this->btnBookParcel->Text =
-				L"Book Parcel";
-
-			this->btnBookParcel->TextAlign =
-				System::Drawing::ContentAlignment::MiddleLeft;
-
+			this->btnBookParcel->Text = L"Book Parcel";
+			this->btnBookParcel->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnBookParcel->UseVisualStyleBackColor = false;
-
-			this->btnBookParcel->Click +=
-				gcnew System::EventHandler(
-					this,
-					&MyDeliveriesFormDesigner::btnBookParcel_Click);
-
+			this->btnBookParcel->Click += gcnew System::EventHandler(this, &MyDeliveriesFormDesigner::btnBookParcel_Click);
+			// 
 			// btnMyDeliveries
-
-			this->btnMyDeliveries->BackColor =
-				System::Drawing::Color::FromArgb(
-					37,
-					99,
-					235);
-
-			this->btnMyDeliveries->Cursor =
-				System::Windows::Forms::Cursors::Hand;
-
+			// 
+			this->btnMyDeliveries->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(37)), static_cast<System::Int32>(static_cast<System::Byte>(99)),
+				static_cast<System::Int32>(static_cast<System::Byte>(235)));
+			this->btnMyDeliveries->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->btnMyDeliveries->FlatAppearance->BorderSize = 0;
-
-			this->btnMyDeliveries->FlatStyle =
-				System::Windows::Forms::FlatStyle::Flat;
-
-			this->btnMyDeliveries->Font =
-				(gcnew System::Drawing::Font(
-					L"Segoe UI",
-					9));
-
-			this->btnMyDeliveries->ForeColor =
-				System::Drawing::Color::White;
-
-			this->btnMyDeliveries->Location =
-				System::Drawing::Point(20, 186);
-
-			this->btnMyDeliveries->Name =
-				L"btnMyDeliveries";
-
-			this->btnMyDeliveries->Size =
-				System::Drawing::Size(165, 38);
-
+			this->btnMyDeliveries->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnMyDeliveries->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9));
+			this->btnMyDeliveries->ForeColor = System::Drawing::Color::White;
+			this->btnMyDeliveries->Location = System::Drawing::Point(20, 186);
+			this->btnMyDeliveries->Name = L"btnMyDeliveries";
+			this->btnMyDeliveries->Size = System::Drawing::Size(165, 38);
 			this->btnMyDeliveries->TabIndex = 2;
-
-			this->btnMyDeliveries->Text =
-				L"My Deliveries";
-
-			this->btnMyDeliveries->TextAlign =
-				System::Drawing::ContentAlignment::MiddleLeft;
-
+			this->btnMyDeliveries->Text = L"My Deliveries";
+			this->btnMyDeliveries->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnMyDeliveries->UseVisualStyleBackColor = false;
-
-			this->btnMyDeliveries->Click +=
-				gcnew System::EventHandler(
-					this,
-					&MyDeliveriesFormDesigner::btnMyDeliveries_Click);
-
+			this->btnMyDeliveries->Click += gcnew System::EventHandler(this, &MyDeliveriesFormDesigner::btnMyDeliveries_Click);
+			// 
 			// btnMyProfile
-
-			this->btnMyProfile->BackColor =
-				System::Drawing::Color::FromArgb(
-					15,
-					23,
-					42);
-
-			this->btnMyProfile->Cursor =
-				System::Windows::Forms::Cursors::Hand;
-
+			// 
+			this->btnMyProfile->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(42)));
+			this->btnMyProfile->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->btnMyProfile->FlatAppearance->BorderSize = 0;
-
-			this->btnMyProfile->FlatStyle =
-				System::Windows::Forms::FlatStyle::Flat;
-
-			this->btnMyProfile->Font =
-				(gcnew System::Drawing::Font(
-					L"Segoe UI",
-					9));
-
-			this->btnMyProfile->ForeColor =
-				System::Drawing::Color::White;
-
-			this->btnMyProfile->Location =
-				System::Drawing::Point(20, 229);
-
-			this->btnMyProfile->Name =
-				L"btnMyProfile";
-
-			this->btnMyProfile->Size =
-				System::Drawing::Size(165, 38);
-
+			this->btnMyProfile->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnMyProfile->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9));
+			this->btnMyProfile->ForeColor = System::Drawing::Color::White;
+			this->btnMyProfile->Location = System::Drawing::Point(20, 229);
+			this->btnMyProfile->Name = L"btnMyProfile";
+			this->btnMyProfile->Size = System::Drawing::Size(165, 38);
 			this->btnMyProfile->TabIndex = 3;
-
-			this->btnMyProfile->Text =
-				L"My Profile";
-
-			this->btnMyProfile->TextAlign =
-				System::Drawing::ContentAlignment::MiddleLeft;
-
+			this->btnMyProfile->Text = L"My Profile";
+			this->btnMyProfile->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnMyProfile->UseVisualStyleBackColor = false;
-
-			this->btnMyProfile->Click +=
-				gcnew System::EventHandler(
-					this,
-					&MyDeliveriesFormDesigner::btnMyProfile_Click);
-
+			this->btnMyProfile->Click += gcnew System::EventHandler(this, &MyDeliveriesFormDesigner::btnMyProfile_Click);
+			// 
 			// btnLogout
-
-			this->btnLogout->BackColor =
-				System::Drawing::Color::FromArgb(
-					15,
-					23,
-					42);
-
-			this->btnLogout->Cursor =
-				System::Windows::Forms::Cursors::Hand;
-
+			// 
+			this->btnLogout->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(42)));
+			this->btnLogout->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->btnLogout->FlatAppearance->BorderSize = 0;
-
-			this->btnLogout->FlatStyle =
-				System::Windows::Forms::FlatStyle::Flat;
-
-			this->btnLogout->Font =
-				(gcnew System::Drawing::Font(
-					L"Segoe UI",
-					9));
-
-			this->btnLogout->ForeColor =
-				System::Drawing::Color::FromArgb(
-					248,
-					113,
-					113);
-
-			this->btnLogout->Location =
-				System::Drawing::Point(20, 630);
-
-			this->btnLogout->Name =
-				L"btnLogout";
-
-			this->btnLogout->Size =
-				System::Drawing::Size(165, 38);
-
+			this->btnLogout->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnLogout->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9));
+			this->btnLogout->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(248)), static_cast<System::Int32>(static_cast<System::Byte>(113)),
+				static_cast<System::Int32>(static_cast<System::Byte>(113)));
+			this->btnLogout->Location = System::Drawing::Point(20, 630);
+			this->btnLogout->Name = L"btnLogout";
+			this->btnLogout->Size = System::Drawing::Size(165, 38);
 			this->btnLogout->TabIndex = 4;
-
-			this->btnLogout->Text =
-				L"Logout";
-
-			this->btnLogout->TextAlign =
-				System::Drawing::ContentAlignment::MiddleLeft;
-
+			this->btnLogout->Text = L"Logout";
+			this->btnLogout->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnLogout->UseVisualStyleBackColor = false;
-
-			this->btnLogout->Click +=
-				gcnew System::EventHandler(
-					this,
-					&MyDeliveriesFormDesigner::btnLogout_Click);
-
+			this->btnLogout->Click += gcnew System::EventHandler(this, &MyDeliveriesFormDesigner::btnLogout_Click);
+			// 
 			// pnlAvatar
-
-			this->pnlAvatar->BackColor =
-				System::Drawing::Color::FromArgb(
-					239,
-					246,
-					255);
-
-			this->pnlAvatar->Controls->Add(
-				this->lblAvatar);
-
-			this->pnlAvatar->Location =
-				System::Drawing::Point(745, 17);
-
-			this->pnlAvatar->Name =
-				L"pnlAvatar";
-
-			this->pnlAvatar->Size =
-				System::Drawing::Size(35, 35);
-
+			// 
+			this->pnlAvatar->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(239)), static_cast<System::Int32>(static_cast<System::Byte>(246)),
+				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->pnlAvatar->Controls->Add(this->lblAvatar);
+			this->pnlAvatar->Location = System::Drawing::Point(745, 17);
+			this->pnlAvatar->Name = L"pnlAvatar";
+			this->pnlAvatar->Size = System::Drawing::Size(35, 35);
 			this->pnlAvatar->TabIndex = 1;
-
+			// 
 			// lblAvatar
-
-			this->lblAvatar->Font =
-				(gcnew System::Drawing::Font(
-					L"Segoe UI",
-					9,
-					System::Drawing::FontStyle::Bold));
-
-			this->lblAvatar->ForeColor =
-				System::Drawing::Color::FromArgb(
-					37,
-					99,
-					235);
-
-			this->lblAvatar->Location =
-				System::Drawing::Point(0, 7);
-
-			this->lblAvatar->Name =
-				L"lblAvatar";
-
-			this->lblAvatar->Size =
-				System::Drawing::Size(35, 22);
-
+			// 
+			this->lblAvatar->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, System::Drawing::FontStyle::Bold));
+			this->lblAvatar->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(37)), static_cast<System::Int32>(static_cast<System::Byte>(99)),
+				static_cast<System::Int32>(static_cast<System::Byte>(235)));
+			this->lblAvatar->Location = System::Drawing::Point(0, 7);
+			this->lblAvatar->Name = L"lblAvatar";
+			this->lblAvatar->Size = System::Drawing::Size(35, 22);
 			this->lblAvatar->TabIndex = 0;
-
-			this->lblAvatar->Text =
-				L"C";
-
-			this->lblAvatar->TextAlign =
-				System::Drawing::ContentAlignment::MiddleCenter;
-
+			this->lblAvatar->Text = L"C";
+			this->lblAvatar->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
 			// pnlHeader
-
-			this->pnlHeader->BackColor =
-				System::Drawing::Color::White;
-
-			this->pnlHeader->Controls->Add(
-				this->lblHeaderTitle);
-
-			this->pnlHeader->Controls->Add(
-				this->pnlAvatar);
-
-			this->pnlHeader->Controls->Add(
-				this->lblHeaderCustomer);
-
-			this->pnlHeader->Location =
-				System::Drawing::Point(205, 0);
-
-			this->pnlHeader->Name =
-				L"pnlHeader";
-
-			this->pnlHeader->Size =
-				System::Drawing::Size(895, 70);
-
+			// 
+			this->pnlHeader->BackColor = System::Drawing::Color::White;
+			this->pnlHeader->Controls->Add(this->lblHeaderTitle);
+			this->pnlHeader->Controls->Add(this->pnlAvatar);
+			this->pnlHeader->Controls->Add(this->lblHeaderCustomer);
+			this->pnlHeader->Location = System::Drawing::Point(205, 0);
+			this->pnlHeader->Name = L"pnlHeader";
+			this->pnlHeader->Size = System::Drawing::Size(895, 70);
 			this->pnlHeader->TabIndex = 1;
-
+			// 
 			// lblHeaderTitle
-
-			this->lblHeaderTitle->Font =
-				(gcnew System::Drawing::Font(
-					L"Segoe UI",
-					12,
-					System::Drawing::FontStyle::Bold));
-
-			this->lblHeaderTitle->ForeColor =
-				System::Drawing::Color::FromArgb(
-					15,
-					23,
-					42);
-
-			this->lblHeaderTitle->Location =
-				System::Drawing::Point(30, 22);
-
-			this->lblHeaderTitle->Name =
-				L"lblHeaderTitle";
-
-			this->lblHeaderTitle->Size =
-				System::Drawing::Size(180, 30);
-
+			// 
+			this->lblHeaderTitle->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold));
+			this->lblHeaderTitle->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(42)));
+			this->lblHeaderTitle->Location = System::Drawing::Point(30, 22);
+			this->lblHeaderTitle->Name = L"lblHeaderTitle";
+			this->lblHeaderTitle->Size = System::Drawing::Size(180, 30);
 			this->lblHeaderTitle->TabIndex = 0;
-
-			this->lblHeaderTitle->Text =
-				L"My Deliveries";
-
+			this->lblHeaderTitle->Text = L"My Deliveries";
+			// 
 			// lblHeaderCustomer
-
-			this->lblHeaderCustomer->Font =
-				(gcnew System::Drawing::Font(
-					L"Segoe UI",
-					9,
-					System::Drawing::FontStyle::Bold));
-
-			this->lblHeaderCustomer->ForeColor =
-				System::Drawing::Color::FromArgb(
-					15,
-					23,
-					42);
-
-			this->lblHeaderCustomer->Location =
-				System::Drawing::Point(790, 24);
-
-			this->lblHeaderCustomer->Name =
-				L"lblHeaderCustomer";
-
-			this->lblHeaderCustomer->Size =
-				System::Drawing::Size(95, 25);
-
+			// 
+			this->lblHeaderCustomer->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, System::Drawing::FontStyle::Bold));
+			this->lblHeaderCustomer->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)),
+				static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(42)));
+			this->lblHeaderCustomer->Location = System::Drawing::Point(790, 24);
+			this->lblHeaderCustomer->Name = L"lblHeaderCustomer";
+			this->lblHeaderCustomer->Size = System::Drawing::Size(95, 25);
 			this->lblHeaderCustomer->TabIndex = 2;
-
-			this->lblHeaderCustomer->Text =
-				L"Customer";
-
+			this->lblHeaderCustomer->Text = L"Customer";
+			// 
 			// pnlContent
-
-			this->pnlContent->BackColor =
-				System::Drawing::Color::FromArgb(
-					248,
-					250,
-					252);
-
-			this->pnlContent->Controls->Add(
-				this->lblTitle);
-
-			this->pnlContent->Controls->Add(
-				this->lblSubtitle);
-
-			this->pnlContent->Controls->Add(
-				this->lblCount);
-
-			this->pnlContent->Controls->Add(
-				this->btnRefresh);
-
-			this->pnlContent->Controls->Add(
-				this->pnlTable);
-
-			this->pnlContent->Location =
-				System::Drawing::Point(205, 70);
-
-			this->pnlContent->Name =
-				L"pnlContent";
-
-			this->pnlContent->Size =
-				System::Drawing::Size(895, 630);
-
+			// 
+			this->pnlContent->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(248)), static_cast<System::Int32>(static_cast<System::Byte>(250)),
+				static_cast<System::Int32>(static_cast<System::Byte>(252)));
+			this->pnlContent->Controls->Add(this->lblTitle);
+			this->pnlContent->Controls->Add(this->lblSubtitle);
+			this->pnlContent->Controls->Add(this->lblCount);
+			this->pnlContent->Controls->Add(this->btnRefresh);
+			this->pnlContent->Controls->Add(this->pnlTable);
+			this->pnlContent->Location = System::Drawing::Point(205, 70);
+			this->pnlContent->Name = L"pnlContent";
+			this->pnlContent->Size = System::Drawing::Size(895, 630);
 			this->pnlContent->TabIndex = 2;
-
+			// 
 			// lblTitle
-
-			this->lblTitle->Font =
-				(gcnew System::Drawing::Font(
-					L"Segoe UI",
-					20,
-					System::Drawing::FontStyle::Bold));
-
-			this->lblTitle->ForeColor =
-				System::Drawing::Color::FromArgb(
-					15,
-					23,
-					42);
-
-			this->lblTitle->Location =
-				System::Drawing::Point(35, 30);
-
-			this->lblTitle->Name =
-				L"lblTitle";
-
-			this->lblTitle->Size =
-				System::Drawing::Size(300, 48);
-
+			// 
+			this->lblTitle->Font = (gcnew System::Drawing::Font(L"Segoe UI", 20, System::Drawing::FontStyle::Bold));
+			this->lblTitle->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+				static_cast<System::Int32>(static_cast<System::Byte>(42)));
+			this->lblTitle->Location = System::Drawing::Point(35, 30);
+			this->lblTitle->Name = L"lblTitle";
+			this->lblTitle->Size = System::Drawing::Size(300, 48);
 			this->lblTitle->TabIndex = 0;
-
-			this->lblTitle->Text =
-				L"My Deliveries";
-
+			this->lblTitle->Text = L"My Deliveries";
+			// 
 			// lblSubtitle
-
-			this->lblSubtitle->Font =
-				(gcnew System::Drawing::Font(
-					L"Segoe UI",
-					9));
-
-			this->lblSubtitle->ForeColor =
-				System::Drawing::Color::FromArgb(
-					100,
-					116,
-					139);
-
-			this->lblSubtitle->Location =
-				System::Drawing::Point(38, 78);
-
-			this->lblSubtitle->Name =
-				L"lblSubtitle";
-
-			this->lblSubtitle->Size =
-				System::Drawing::Size(400, 25);
-
+			// 
+			this->lblSubtitle->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9));
+			this->lblSubtitle->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(100)), static_cast<System::Int32>(static_cast<System::Byte>(116)),
+				static_cast<System::Int32>(static_cast<System::Byte>(139)));
+			this->lblSubtitle->Location = System::Drawing::Point(38, 78);
+			this->lblSubtitle->Name = L"lblSubtitle";
+			this->lblSubtitle->Size = System::Drawing::Size(400, 25);
 			this->lblSubtitle->TabIndex = 1;
-
-			this->lblSubtitle->Text =
-				L"View and manage all your parcel bookings.";
-
+			this->lblSubtitle->Text = L"View and manage all your parcel bookings.";
+			// 
 			// lblCount
-
-			this->lblCount->Font =
-				(gcnew System::Drawing::Font(
-					L"Segoe UI",
-					9,
-					System::Drawing::FontStyle::Bold));
-
-			this->lblCount->ForeColor =
-				System::Drawing::Color::FromArgb(
-					51,
-					65,
-					85);
-
-			this->lblCount->Location =
-				System::Drawing::Point(38, 118);
-
-			this->lblCount->Name =
-				L"lblCount";
-
-			this->lblCount->Size =
-				System::Drawing::Size(200, 25);
-
+			// 
+			this->lblCount->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, System::Drawing::FontStyle::Bold));
+			this->lblCount->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(65)),
+				static_cast<System::Int32>(static_cast<System::Byte>(85)));
+			this->lblCount->Location = System::Drawing::Point(38, 118);
+			this->lblCount->Name = L"lblCount";
+			this->lblCount->Size = System::Drawing::Size(200, 25);
 			this->lblCount->TabIndex = 2;
-
-			this->lblCount->Text =
-				L"0 deliveries";
-
+			this->lblCount->Text = L"0 deliveries";
+			// 
 			// btnRefresh
-
-			this->btnRefresh->BackColor =
-				System::Drawing::Color::White;
-
-			this->btnRefresh->Cursor =
-				System::Windows::Forms::Cursors::Hand;
-
-			this->btnRefresh->FlatAppearance->BorderColor =
-				System::Drawing::Color::FromArgb(
-					37,
-					99,
-					235);
-
-			this->btnRefresh->FlatStyle =
-				System::Windows::Forms::FlatStyle::Flat;
-
-			this->btnRefresh->Font =
-				(gcnew System::Drawing::Font(
-					L"Segoe UI",
-					9));
-
-			this->btnRefresh->ForeColor =
-				System::Drawing::Color::FromArgb(
-					37,
-					99,
-					235);
-
-			this->btnRefresh->Location =
-				System::Drawing::Point(745, 105);
-
-			this->btnRefresh->Name =
-				L"btnRefresh";
-
-			this->btnRefresh->Size =
-				System::Drawing::Size(105, 36);
-
+			// 
+			this->btnRefresh->BackColor = System::Drawing::Color::White;
+			this->btnRefresh->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnRefresh->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(37)),
+				static_cast<System::Int32>(static_cast<System::Byte>(99)), static_cast<System::Int32>(static_cast<System::Byte>(235)));
+			this->btnRefresh->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnRefresh->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9));
+			this->btnRefresh->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(37)), static_cast<System::Int32>(static_cast<System::Byte>(99)),
+				static_cast<System::Int32>(static_cast<System::Byte>(235)));
+			this->btnRefresh->Location = System::Drawing::Point(745, 105);
+			this->btnRefresh->Name = L"btnRefresh";
+			this->btnRefresh->Size = System::Drawing::Size(105, 36);
 			this->btnRefresh->TabIndex = 0;
-
-			this->btnRefresh->Text =
-				L"Refresh";
-
+			this->btnRefresh->Text = L"Refresh";
 			this->btnRefresh->UseVisualStyleBackColor = false;
-
-			this->btnRefresh->Click +=
-				gcnew System::EventHandler(
-					this,
-					&MyDeliveriesFormDesigner::btnRefresh_Click);
-
+			this->btnRefresh->Click += gcnew System::EventHandler(this, &MyDeliveriesFormDesigner::btnRefresh_Click);
+			// 
 			// pnlTable
-
-			this->pnlTable->BackColor =
-				System::Drawing::Color::White;
-
-			this->pnlTable->BorderStyle =
-				System::Windows::Forms::BorderStyle::FixedSingle;
-
-			this->pnlTable->Controls->Add(
-				this->dgvDeliveries);
-
-			this->pnlTable->Location =
-				System::Drawing::Point(35, 155);
-
-			this->pnlTable->Name =
-				L"pnlTable";
-
-			this->pnlTable->Size =
-				System::Drawing::Size(815, 430);
-
+			// 
+			this->pnlTable->BackColor = System::Drawing::Color::White;
+			this->pnlTable->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->pnlTable->Controls->Add(this->dgvDeliveries);
+			this->pnlTable->Location = System::Drawing::Point(35, 155);
+			this->pnlTable->Name = L"pnlTable";
+			this->pnlTable->Size = System::Drawing::Size(815, 430);
 			this->pnlTable->TabIndex = 3;
-
+			// 
 			// dgvDeliveries
-
+			// 
 			this->dgvDeliveries->AllowUserToAddRows = false;
 			this->dgvDeliveries->AllowUserToDeleteRows = false;
 			this->dgvDeliveries->AllowUserToResizeRows = false;
-
-			this->dgvDeliveries->AutoGenerateColumns = false;
-
-			this->dgvDeliveries->BackgroundColor =
-				System::Drawing::Color::White;
-
-			this->dgvDeliveries->BorderStyle =
-				System::Windows::Forms::BorderStyle::None;
-
-			this->dgvDeliveries->CellBorderStyle =
-				System::Windows::Forms::DataGridViewCellBorderStyle::
-				SingleHorizontal;
-
+			this->dgvDeliveries->BackgroundColor = System::Drawing::Color::White;
+			this->dgvDeliveries->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->dgvDeliveries->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::SingleHorizontal;
 			this->dgvDeliveries->ColumnHeadersHeight = 42;
-
-			this->dgvDeliveries->ColumnHeadersHeightSizeMode =
-				System::Windows::Forms::
-				DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
-
-			this->dgvDeliveries->Columns->AddRange(
-				gcnew cli::array<
-				System::Windows::Forms::DataGridViewColumn^>(10)
-			{
-				this->colParcelId,
-					this->colTracking,
-					this->colReceiver,
-					this->colService,
-					this->colCharge,
-					this->colStatus,
-					this->colDate,
-					this->colView,
-					this->colEdit,
-					this->colCancel
+			this->dgvDeliveries->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
+			this->dgvDeliveries->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(3) {
+				this->colView,
+					this->colEdit, this->colCancel
 			});
-
-			this->dgvDeliveries->Dock =
-				System::Windows::Forms::DockStyle::Fill;
-
+			this->dgvDeliveries->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->dgvDeliveries->EnableHeadersVisualStyles = false;
-
-			this->dgvDeliveries->GridColor =
-				System::Drawing::Color::FromArgb(
-					226,
-					232,
-					240);
-
-			this->dgvDeliveries->Location =
-				System::Drawing::Point(0, 0);
-
+			this->dgvDeliveries->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)), static_cast<System::Int32>(static_cast<System::Byte>(232)),
+				static_cast<System::Int32>(static_cast<System::Byte>(240)));
+			this->dgvDeliveries->Location = System::Drawing::Point(0, 0);
 			this->dgvDeliveries->MultiSelect = false;
-
-			this->dgvDeliveries->Name =
-				L"dgvDeliveries";
-
+			this->dgvDeliveries->Name = L"dgvDeliveries";
 			this->dgvDeliveries->ReadOnly = true;
-
 			this->dgvDeliveries->RowHeadersVisible = false;
-
 			this->dgvDeliveries->RowHeadersWidth = 51;
-
 			this->dgvDeliveries->RowTemplate->Height = 45;
-
-			this->dgvDeliveries->SelectionMode =
-				System::Windows::Forms::
-				DataGridViewSelectionMode::FullRowSelect;
-
-			this->dgvDeliveries->Size =
-				System::Drawing::Size(813, 428);
-
+			this->dgvDeliveries->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
+			this->dgvDeliveries->Size = System::Drawing::Size(813, 428);
 			this->dgvDeliveries->TabIndex = 0;
-
-			this->dgvDeliveries->CellContentClick +=
-				gcnew System::Windows::Forms::
-				DataGridViewCellEventHandler(
-					this,
-					&MyDeliveriesFormDesigner::
-					dgvDeliveries_CellContentClick);
-
-			// colParcelId
-
-			this->colParcelId->DataPropertyName =
-				L"parcel_id";
-
-			this->colParcelId->HeaderText =
-				L"Parcel ID";
-
-			this->colParcelId->Name =
-				L"colParcelId";
-
-			this->colParcelId->ReadOnly = true;
-
-			this->colParcelId->Visible = false;
-
-			// colTracking
-
-			this->colTracking->DataPropertyName =
-				L"tracking_no";
-
-			this->colTracking->HeaderText =
-				L"Tracking No.";
-
-			this->colTracking->Name =
-				L"colTracking";
-
-			this->colTracking->ReadOnly = true;
-
-			this->colTracking->Width = 120;
-
-			// colReceiver
-
-			this->colReceiver->DataPropertyName =
-				L"receiver_name";
-
-			this->colReceiver->HeaderText =
-				L"Receiver";
-
-			this->colReceiver->Name =
-				L"colReceiver";
-
-			this->colReceiver->ReadOnly = true;
-
-			this->colReceiver->Width = 110;
-
-			// colService
-
-			this->colService->DataPropertyName =
-				L"delivery_option";
-
-			this->colService->HeaderText =
-				L"Service";
-
-			this->colService->Name =
-				L"colService";
-
-			this->colService->ReadOnly = true;
-
-			this->colService->Width = 85;
-
-			// colCharge
-
-			this->colCharge->DataPropertyName =
-				L"charge";
-
-			this->colCharge->HeaderText =
-				L"Charge";
-
-			this->colCharge->Name =
-				L"colCharge";
-
-			this->colCharge->ReadOnly = true;
-
-			this->colCharge->Width = 80;
-
-			this->colCharge->DefaultCellStyle->Format =
-				L"N2";
-
-			// colStatus
-
-			this->colStatus->DataPropertyName =
-				L"status";
-
-			this->colStatus->HeaderText =
-				L"Status";
-
-			this->colStatus->Name =
-				L"colStatus";
-
-			this->colStatus->ReadOnly = true;
-
-			this->colStatus->Width = 100;
-
-			// colDate
-
-			this->colDate->DataPropertyName =
-				L"created_at";
-
-			this->colDate->HeaderText =
-				L"Date";
-
-			this->colDate->Name =
-				L"colDate";
-
-			this->colDate->ReadOnly = true;
-
-			this->colDate->Width = 90;
-
-			this->colDate->DefaultCellStyle->Format =
-				L"yyyy-MM-dd";
-
+			this->dgvDeliveries->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyDeliveriesFormDesigner::dgvDeliveries_CellContentClick);
+			// 
 			// colView
-
+			// 
 			this->colView->HeaderText = L"";
 			this->colView->MinimumWidth = 6;
 			this->colView->Name = L"colView";
@@ -1067,9 +428,9 @@ namespace CourrierEase
 			this->colView->Text = L"View";
 			this->colView->UseColumnTextForButtonValue = true;
 			this->colView->Width = 65;
-
+			// 
 			// colEdit
-
+			// 
 			this->colEdit->HeaderText = L"";
 			this->colEdit->MinimumWidth = 6;
 			this->colEdit->Name = L"colEdit";
@@ -1077,9 +438,9 @@ namespace CourrierEase
 			this->colEdit->Text = L"Edit";
 			this->colEdit->UseColumnTextForButtonValue = true;
 			this->colEdit->Width = 65;
-
+			// 
 			// colCancel
-
+			// 
 			this->colCancel->HeaderText = L"";
 			this->colCancel->MinimumWidth = 6;
 			this->colCancel->Name = L"colCancel";
@@ -1087,62 +448,31 @@ namespace CourrierEase
 			this->colCancel->Text = L"Cancel";
 			this->colCancel->UseColumnTextForButtonValue = true;
 			this->colCancel->Width = 70;
-
+			// 
 			// MyDeliveriesFormDesigner
-
-			this->AutoScaleDimensions =
-				System::Drawing::SizeF(8, 20);
-
-			this->AutoScaleMode =
-				System::Windows::Forms::AutoScaleMode::Font;
-
-			this->BackColor =
-				System::Drawing::Color::FromArgb(
-					248,
-					250,
-					252);
-
-			this->ClientSize =
-				System::Drawing::Size(1100, 700);
-
-			this->Controls->Add(
-				this->pnlContent);
-
-			this->Controls->Add(
-				this->pnlHeader);
-
-			this->Controls->Add(
-				this->pnlSidebar);
-
-			this->Font =
-				(gcnew System::Drawing::Font(
-					L"Segoe UI",
-					9));
-
-			this->FormBorderStyle =
-				System::Windows::Forms::FormBorderStyle::FixedSingle;
-
+			// 
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 20);
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(248)), static_cast<System::Int32>(static_cast<System::Byte>(250)),
+				static_cast<System::Int32>(static_cast<System::Byte>(252)));
+			this->ClientSize = System::Drawing::Size(1100, 700);
+			this->Controls->Add(this->pnlContent);
+			this->Controls->Add(this->pnlHeader);
+			this->Controls->Add(this->pnlSidebar);
+			this->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9));
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->MaximizeBox = false;
-
-			this->Name =
-				L"MyDeliveriesFormDesigner";
-
-			this->StartPosition =
-				System::Windows::Forms::FormStartPosition::CenterScreen;
-
-			this->Text =
-				L"CourierEase - My Deliveries";
-
+			this->Name = L"MyDeliveriesFormDesigner";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
+			this->Text = L"CourierEase - My Deliveries";
 			this->pnlSidebar->ResumeLayout(false);
 			this->pnlAvatar->ResumeLayout(false);
 			this->pnlHeader->ResumeLayout(false);
 			this->pnlContent->ResumeLayout(false);
 			this->pnlTable->ResumeLayout(false);
-
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(
-				this->dgvDeliveries))->EndInit();
-
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvDeliveries))->EndInit();
 			this->ResumeLayout(false);
+
 		}
 
 #pragma endregion

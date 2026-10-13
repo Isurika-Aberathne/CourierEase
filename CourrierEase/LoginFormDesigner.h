@@ -38,13 +38,13 @@ namespace CourrierEase {
 
 	private:
 		System::Windows::Forms::Panel^ pnlHeader;
-		System::Windows::Forms::Panel^ pnlLogo;
+
 		System::Windows::Forms::Label^ lblBrand;
 		System::Windows::Forms::Label^ lblBack;
 
 		System::Windows::Forms::Panel^ pnlInfo;
-		System::Windows::Forms::Panel^ pnlParcelIcon;
-		System::Windows::Forms::Panel^ pnlParcelLine;
+
+
 		System::Windows::Forms::Label^ lblWelcome;
 		System::Windows::Forms::Label^ lblInfo;
 		System::Windows::Forms::Label^ lblFeature1;
@@ -73,6 +73,7 @@ namespace CourrierEase {
 		System::Windows::Forms::LinkLabel^ linkRegister;
 
 		System::Windows::Forms::Label^ lblBottomText;
+	private: System::Windows::Forms::PictureBox^ pictureBox1;
 
 		System::ComponentModel::Container^ components;
 
@@ -80,18 +81,16 @@ namespace CourrierEase {
 
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(LoginFormDesigner::typeid));
 			this->pnlHeader = (gcnew System::Windows::Forms::Panel());
 			this->lblBack = (gcnew System::Windows::Forms::Label());
 			this->lblBrand = (gcnew System::Windows::Forms::Label());
-			this->pnlLogo = (gcnew System::Windows::Forms::Panel());
 			this->pnlInfo = (gcnew System::Windows::Forms::Panel());
 			this->lblFeature3 = (gcnew System::Windows::Forms::Label());
 			this->lblFeature2 = (gcnew System::Windows::Forms::Label());
 			this->lblFeature1 = (gcnew System::Windows::Forms::Label());
 			this->lblInfo = (gcnew System::Windows::Forms::Label());
 			this->lblWelcome = (gcnew System::Windows::Forms::Label());
-			this->pnlParcelIcon = (gcnew System::Windows::Forms::Panel());
-			this->pnlParcelLine = (gcnew System::Windows::Forms::Panel());
 			this->pnlLoginCard = (gcnew System::Windows::Forms::Panel());
 			this->lblBottomText = (gcnew System::Windows::Forms::Label());
 			this->linkRegister = (gcnew System::Windows::Forms::LinkLabel());
@@ -107,10 +106,11 @@ namespace CourrierEase {
 			this->lblEmail = (gcnew System::Windows::Forms::Label());
 			this->lblLoginSubtitle = (gcnew System::Windows::Forms::Label());
 			this->lblLoginTitle = (gcnew System::Windows::Forms::Label());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->pnlHeader->SuspendLayout();
 			this->pnlInfo->SuspendLayout();
-			this->pnlParcelIcon->SuspendLayout();
 			this->pnlLoginCard->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// pnlHeader
@@ -118,7 +118,6 @@ namespace CourrierEase {
 			this->pnlHeader->BackColor = System::Drawing::Color::White;
 			this->pnlHeader->Controls->Add(this->lblBack);
 			this->pnlHeader->Controls->Add(this->lblBrand);
-			this->pnlHeader->Controls->Add(this->pnlLogo);
 			this->pnlHeader->Dock = System::Windows::Forms::DockStyle::Top;
 			this->pnlHeader->Location = System::Drawing::Point(0, 0);
 			this->pnlHeader->Name = L"pnlHeader";
@@ -145,31 +144,22 @@ namespace CourrierEase {
 			this->lblBrand->Font = (gcnew System::Drawing::Font(L"Segoe UI", 13, System::Drawing::FontStyle::Bold));
 			this->lblBrand->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
 				static_cast<System::Int32>(static_cast<System::Byte>(42)));
-			this->lblBrand->Location = System::Drawing::Point(102, 20);
+			this->lblBrand->Location = System::Drawing::Point(12, 15);
 			this->lblBrand->Name = L"lblBrand";
 			this->lblBrand->Size = System::Drawing::Size(135, 30);
 			this->lblBrand->TabIndex = 1;
 			this->lblBrand->Text = L"CourierEase";
 			// 
-			// pnlLogo
-			// 
-			this->pnlLogo->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(245)), static_cast<System::Int32>(static_cast<System::Byte>(158)),
-				static_cast<System::Int32>(static_cast<System::Byte>(11)));
-			this->pnlLogo->Location = System::Drawing::Point(65, 19);
-			this->pnlLogo->Name = L"pnlLogo";
-			this->pnlLogo->Size = System::Drawing::Size(28, 28);
-			this->pnlLogo->TabIndex = 0;
-			// 
 			// pnlInfo
 			// 
 			this->pnlInfo->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(239)), static_cast<System::Int32>(static_cast<System::Byte>(246)),
 				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->pnlInfo->Controls->Add(this->pictureBox1);
 			this->pnlInfo->Controls->Add(this->lblFeature3);
 			this->pnlInfo->Controls->Add(this->lblFeature2);
 			this->pnlInfo->Controls->Add(this->lblFeature1);
 			this->pnlInfo->Controls->Add(this->lblInfo);
 			this->pnlInfo->Controls->Add(this->lblWelcome);
-			this->pnlInfo->Controls->Add(this->pnlParcelIcon);
 			this->pnlInfo->Location = System::Drawing::Point(100, 110);
 			this->pnlInfo->Name = L"pnlInfo";
 			this->pnlInfo->Size = System::Drawing::Size(350, 450);
@@ -182,9 +172,9 @@ namespace CourrierEase {
 				static_cast<System::Int32>(static_cast<System::Byte>(42)));
 			this->lblFeature3->Location = System::Drawing::Point(75, 390);
 			this->lblFeature3->Name = L"lblFeature3";
-			this->lblFeature3->Size = System::Drawing::Size(197, 20);
+			this->lblFeature3->Size = System::Drawing::Size(178, 20);
 			this->lblFeature3->TabIndex = 5;
-			this->lblFeature3->Text = L"\u2713  View your delivery history";
+			this->lblFeature3->Text = L"View your delivery history";
 			// 
 			// lblFeature2
 			// 
@@ -193,9 +183,9 @@ namespace CourrierEase {
 				static_cast<System::Int32>(static_cast<System::Byte>(42)));
 			this->lblFeature2->Location = System::Drawing::Point(75, 350);
 			this->lblFeature2->Name = L"lblFeature2";
-			this->lblFeature2->Size = System::Drawing::Size(179, 20);
+			this->lblFeature2->Size = System::Drawing::Size(160, 20);
 			this->lblFeature2->TabIndex = 4;
-			this->lblFeature2->Text = L"\u2713  Track delivery progress";
+			this->lblFeature2->Text = L"Track delivery progress";
 			// 
 			// lblFeature1
 			// 
@@ -204,9 +194,9 @@ namespace CourrierEase {
 				static_cast<System::Int32>(static_cast<System::Byte>(42)));
 			this->lblFeature1->Location = System::Drawing::Point(75, 310);
 			this->lblFeature1->Name = L"lblFeature1";
-			this->lblFeature1->Size = System::Drawing::Size(200, 20);
+			this->lblFeature1->Size = System::Drawing::Size(181, 20);
 			this->lblFeature1->TabIndex = 3;
-			this->lblFeature1->Text = L"\u2713  Book and manage parcels";
+			this->lblFeature1->Text = L"Book and manage parcels";
 			this->lblFeature1->Click += gcnew System::EventHandler(this, &LoginFormDesigner::lblFeature1_Click);
 			// 
 			// lblInfo
@@ -231,25 +221,6 @@ namespace CourrierEase {
 			this->lblWelcome->TabIndex = 1;
 			this->lblWelcome->Text = L"Welcome back!";
 			this->lblWelcome->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			// 
-			// pnlParcelIcon
-			// 
-			this->pnlParcelIcon->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(245)), static_cast<System::Int32>(static_cast<System::Byte>(158)),
-				static_cast<System::Int32>(static_cast<System::Byte>(11)));
-			this->pnlParcelIcon->Controls->Add(this->pnlParcelLine);
-			this->pnlParcelIcon->Location = System::Drawing::Point(115, 60);
-			this->pnlParcelIcon->Name = L"pnlParcelIcon";
-			this->pnlParcelIcon->Size = System::Drawing::Size(120, 90);
-			this->pnlParcelIcon->TabIndex = 0;
-			// 
-			// pnlParcelLine
-			// 
-			this->pnlParcelLine->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(237)),
-				static_cast<System::Int32>(static_cast<System::Byte>(190)));
-			this->pnlParcelLine->Location = System::Drawing::Point(52, 0);
-			this->pnlParcelLine->Name = L"pnlParcelLine";
-			this->pnlParcelLine->Size = System::Drawing::Size(16, 90);
-			this->pnlParcelLine->TabIndex = 0;
 			// 
 			// pnlLoginCard
 			// 
@@ -444,6 +415,16 @@ namespace CourrierEase {
 			this->lblLoginTitle->TabIndex = 0;
 			this->lblLoginTitle->Text = L"Login to CourierEase";
 			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(70, 3);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(214, 176);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox1->TabIndex = 6;
+			this->pictureBox1->TabStop = false;
+			// 
 			// LoginFormDesigner
 			// 
 			this->AcceptButton = this->btnLogin;
@@ -465,9 +446,9 @@ namespace CourrierEase {
 			this->pnlHeader->PerformLayout();
 			this->pnlInfo->ResumeLayout(false);
 			this->pnlInfo->PerformLayout();
-			this->pnlParcelIcon->ResumeLayout(false);
 			this->pnlLoginCard->ResumeLayout(false);
 			this->pnlLoginCard->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 
 		}
