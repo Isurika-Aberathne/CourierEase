@@ -23,9 +23,19 @@ namespace CourrierEase
                 );
             }
 
+            String^ port =
+                Environment::GetEnvironmentVariable(
+                    "COURIEREASE_DB_PORT"
+                );
+
+            if (String::IsNullOrWhiteSpace(port))
+            {
+                port = "3306";
+            }
+
             return
                 "server=127.0.0.1;"
-                "port=3307;"
+                "port=" + port + ";"
                 "database=courierease_db;"
                 "uid=root;"
                 "pwd=" + password + ";";
