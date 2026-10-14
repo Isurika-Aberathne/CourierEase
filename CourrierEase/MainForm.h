@@ -41,7 +41,7 @@ namespace CourrierEase
 		System::Windows::Forms::Button^ btnLogin;
 		System::Windows::Forms::Button^ btnRegister;
 
-		System::Windows::Forms::Label^ lblBadge;
+
 		System::Windows::Forms::Label^ lblHeroTitle;
 		System::Windows::Forms::Label^ lblHeroText;
 
@@ -54,7 +54,7 @@ namespace CourrierEase
 
 
 
-		System::Windows::Forms::Label^ lblTruckText;
+
 
 		System::Windows::Forms::Panel^ pnlTracking;
 		System::Windows::Forms::Label^ lblTrackTitle;
@@ -63,16 +63,23 @@ namespace CourrierEase
 
 		System::Windows::Forms::Label^ lblServicesTitle;
 
-		System::Windows::Forms::Panel^ pnlStandard;
-		System::Windows::Forms::Panel^ pnlExpress;
 
 
 
-		System::Windows::Forms::Label^ lblStandardTitle;
-		System::Windows::Forms::Label^ lblStandardText;
-		System::Windows::Forms::Label^ lblExpressTitle;
-		System::Windows::Forms::Label^ lblExpressText;
+
+
+
+
+
+
 	private: System::Windows::Forms::PictureBox^ pictureBoxHero;
+	private: System::Windows::Forms::Label^ lblStandardText;
+	private: System::Windows::Forms::Label^ lblStandardTitle;
+	private: System::Windows::Forms::Label^ lblExpressTitle;
+	private: System::Windows::Forms::Label^ lblExpressText;
+	private: System::Windows::Forms::PictureBox^ pictureBox1;
+	private: System::Windows::Forms::Panel^ panel1;
+	private: System::Windows::Forms::Panel^ panel2;
 
 
 		System::ComponentModel::Container^ components;
@@ -90,34 +97,33 @@ namespace CourrierEase
 			this->lblAbout = (gcnew System::Windows::Forms::Label());
 			this->btnLogin = (gcnew System::Windows::Forms::Button());
 			this->btnRegister = (gcnew System::Windows::Forms::Button());
-			this->lblBadge = (gcnew System::Windows::Forms::Label());
 			this->lblHeroTitle = (gcnew System::Windows::Forms::Label());
 			this->lblHeroText = (gcnew System::Windows::Forms::Label());
 			this->btnBookParcel = (gcnew System::Windows::Forms::Button());
 			this->btnTrackHero = (gcnew System::Windows::Forms::Button());
-			this->lblTruckText = (gcnew System::Windows::Forms::Label());
 			this->pnlTracking = (gcnew System::Windows::Forms::Panel());
 			this->lblTrackTitle = (gcnew System::Windows::Forms::Label());
 			this->txtTracking = (gcnew System::Windows::Forms::TextBox());
 			this->btnTrackParcel = (gcnew System::Windows::Forms::Button());
 			this->lblServicesTitle = (gcnew System::Windows::Forms::Label());
-			this->pnlStandard = (gcnew System::Windows::Forms::Panel());
-			this->lblStandardTitle = (gcnew System::Windows::Forms::Label());
+			this->pictureBoxHero = (gcnew System::Windows::Forms::PictureBox());
 			this->lblStandardText = (gcnew System::Windows::Forms::Label());
-			this->pnlExpress = (gcnew System::Windows::Forms::Panel());
+			this->lblStandardTitle = (gcnew System::Windows::Forms::Label());
 			this->lblExpressTitle = (gcnew System::Windows::Forms::Label());
 			this->lblExpressText = (gcnew System::Windows::Forms::Label());
-			this->pictureBoxHero = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->pnlHeader->SuspendLayout();
 			this->pnlTracking->SuspendLayout();
-			this->pnlStandard->SuspendLayout();
-			this->pnlExpress->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBoxHero))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+			this->panel1->SuspendLayout();
+			this->panel2->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// pnlHeader
 			// 
-			this->pnlHeader->BackColor = System::Drawing::Color::White;
 			this->pnlHeader->Controls->Add(this->lblBrand);
 			this->pnlHeader->Controls->Add(this->lblHome);
 			this->pnlHeader->Controls->Add(this->lblServices);
@@ -230,26 +236,12 @@ namespace CourrierEase
 			this->btnRegister->UseVisualStyleBackColor = false;
 			this->btnRegister->Click += gcnew System::EventHandler(this, &MainForm::btnRegister_Click);
 			// 
-			// lblBadge
-			// 
-			this->lblBadge->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(219)), static_cast<System::Int32>(static_cast<System::Byte>(234)),
-				static_cast<System::Int32>(static_cast<System::Byte>(254)));
-			this->lblBadge->Font = (gcnew System::Drawing::Font(L"Segoe UI", 8, System::Drawing::FontStyle::Bold));
-			this->lblBadge->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(37)), static_cast<System::Int32>(static_cast<System::Byte>(99)),
-				static_cast<System::Int32>(static_cast<System::Byte>(235)));
-			this->lblBadge->Location = System::Drawing::Point(60, 115);
-			this->lblBadge->Name = L"lblBadge";
-			this->lblBadge->Size = System::Drawing::Size(140, 25);
-			this->lblBadge->TabIndex = 1;
-			this->lblBadge->Text = L"Fast - Safe - Reliable";
-			this->lblBadge->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			// 
 			// lblHeroTitle
 			// 
 			this->lblHeroTitle->Font = (gcnew System::Drawing::Font(L"Segoe UI", 25, System::Drawing::FontStyle::Bold));
 			this->lblHeroTitle->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
 				static_cast<System::Int32>(static_cast<System::Byte>(42)));
-			this->lblHeroTitle->Location = System::Drawing::Point(60, 155);
+			this->lblHeroTitle->Location = System::Drawing::Point(12, 84);
 			this->lblHeroTitle->Name = L"lblHeroTitle";
 			this->lblHeroTitle->Size = System::Drawing::Size(480, 110);
 			this->lblHeroTitle->TabIndex = 2;
@@ -257,10 +249,10 @@ namespace CourrierEase
 			// 
 			// lblHeroText
 			// 
+			this->lblHeroText->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->lblHeroText->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10));
-			this->lblHeroText->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(100)), static_cast<System::Int32>(static_cast<System::Byte>(116)),
-				static_cast<System::Int32>(static_cast<System::Byte>(139)));
-			this->lblHeroText->Location = System::Drawing::Point(60, 264);
+			this->lblHeroText->ForeColor = System::Drawing::Color::Black;
+			this->lblHeroText->Location = System::Drawing::Point(18, 210);
 			this->lblHeroText->Name = L"lblHeroText";
 			this->lblHeroText->Size = System::Drawing::Size(480, 50);
 			this->lblHeroText->TabIndex = 3;
@@ -276,7 +268,7 @@ namespace CourrierEase
 			this->btnBookParcel->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnBookParcel->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, System::Drawing::FontStyle::Bold));
 			this->btnBookParcel->ForeColor = System::Drawing::Color::White;
-			this->btnBookParcel->Location = System::Drawing::Point(60, 317);
+			this->btnBookParcel->Location = System::Drawing::Point(22, 286);
 			this->btnBookParcel->Name = L"btnBookParcel";
 			this->btnBookParcel->Size = System::Drawing::Size(115, 38);
 			this->btnBookParcel->TabIndex = 2;
@@ -293,25 +285,13 @@ namespace CourrierEase
 			this->btnTrackHero->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnTrackHero->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(37)), static_cast<System::Int32>(static_cast<System::Byte>(99)),
 				static_cast<System::Int32>(static_cast<System::Byte>(235)));
-			this->btnTrackHero->Location = System::Drawing::Point(182, 317);
+			this->btnTrackHero->Location = System::Drawing::Point(144, 286);
 			this->btnTrackHero->Name = L"btnTrackHero";
 			this->btnTrackHero->Size = System::Drawing::Size(110, 38);
 			this->btnTrackHero->TabIndex = 3;
 			this->btnTrackHero->Text = L"Track Parcel";
 			this->btnTrackHero->UseVisualStyleBackColor = false;
 			this->btnTrackHero->Click += gcnew System::EventHandler(this, &MainForm::btnTrackHero_Click);
-			// 
-			// lblTruckText
-			// 
-			this->lblTruckText->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10, System::Drawing::FontStyle::Bold));
-			this->lblTruckText->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(175)));
-			this->lblTruckText->Location = System::Drawing::Point(780, 358);
-			this->lblTruckText->Name = L"lblTruckText";
-			this->lblTruckText->Size = System::Drawing::Size(220, 30);
-			this->lblTruckText->TabIndex = 4;
-			this->lblTruckText->Text = L"Simple. Reliable. Trackable.";
-			this->lblTruckText->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// pnlTracking
 			// 
@@ -320,9 +300,9 @@ namespace CourrierEase
 			this->pnlTracking->Controls->Add(this->lblTrackTitle);
 			this->pnlTracking->Controls->Add(this->txtTracking);
 			this->pnlTracking->Controls->Add(this->btnTrackParcel);
-			this->pnlTracking->Location = System::Drawing::Point(60, 390);
+			this->pnlTracking->Location = System::Drawing::Point(22, 353);
 			this->pnlTracking->Name = L"pnlTracking";
-			this->pnlTracking->Size = System::Drawing::Size(940, 90);
+			this->pnlTracking->Size = System::Drawing::Size(511, 127);
 			this->pnlTracking->TabIndex = 5;
 			// 
 			// lblTrackTitle
@@ -331,7 +311,7 @@ namespace CourrierEase
 			this->lblTrackTitle->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold));
 			this->lblTrackTitle->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
 				static_cast<System::Int32>(static_cast<System::Byte>(42)));
-			this->lblTrackTitle->Location = System::Drawing::Point(20, 15);
+			this->lblTrackTitle->Location = System::Drawing::Point(11, 19);
 			this->lblTrackTitle->Name = L"lblTrackTitle";
 			this->lblTrackTitle->Size = System::Drawing::Size(174, 28);
 			this->lblTrackTitle->TabIndex = 0;
@@ -341,9 +321,9 @@ namespace CourrierEase
 			// 
 			this->txtTracking->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->txtTracking->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10));
-			this->txtTracking->Location = System::Drawing::Point(20, 47);
+			this->txtTracking->Location = System::Drawing::Point(16, 50);
 			this->txtTracking->Name = L"txtTracking";
-			this->txtTracking->Size = System::Drawing::Size(650, 30);
+			this->txtTracking->Size = System::Drawing::Size(310, 30);
 			this->txtTracking->TabIndex = 0;
 			this->txtTracking->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &MainForm::txtTracking_KeyDown);
 			// 
@@ -356,9 +336,9 @@ namespace CourrierEase
 			this->btnTrackParcel->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnTrackParcel->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, System::Drawing::FontStyle::Bold));
 			this->btnTrackParcel->ForeColor = System::Drawing::Color::White;
-			this->btnTrackParcel->Location = System::Drawing::Point(690, 44);
+			this->btnTrackParcel->Location = System::Drawing::Point(332, 46);
 			this->btnTrackParcel->Name = L"btnTrackParcel";
-			this->btnTrackParcel->Size = System::Drawing::Size(115, 35);
+			this->btnTrackParcel->Size = System::Drawing::Size(102, 36);
 			this->btnTrackParcel->TabIndex = 1;
 			this->btnTrackParcel->Text = L"Track Parcel";
 			this->btnTrackParcel->UseVisualStyleBackColor = false;
@@ -370,22 +350,32 @@ namespace CourrierEase
 			this->lblServicesTitle->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15, System::Drawing::FontStyle::Bold));
 			this->lblServicesTitle->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
 				static_cast<System::Int32>(static_cast<System::Byte>(42)));
-			this->lblServicesTitle->Location = System::Drawing::Point(60, 510);
+			this->lblServicesTitle->Location = System::Drawing::Point(325, 502);
 			this->lblServicesTitle->Name = L"lblServicesTitle";
 			this->lblServicesTitle->Size = System::Drawing::Size(268, 35);
 			this->lblServicesTitle->TabIndex = 6;
 			this->lblServicesTitle->Text = L"Our Delivery Services";
 			// 
-			// pnlStandard
+			// pictureBoxHero
 			// 
-			this->pnlStandard->BackColor = System::Drawing::Color::White;
-			this->pnlStandard->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->pnlStandard->Controls->Add(this->lblStandardTitle);
-			this->pnlStandard->Controls->Add(this->lblStandardText);
-			this->pnlStandard->Location = System::Drawing::Point(60, 550);
-			this->pnlStandard->Name = L"pnlStandard";
-			this->pnlStandard->Size = System::Drawing::Size(455, 100);
-			this->pnlStandard->TabIndex = 7;
+			this->pictureBoxHero->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBoxHero.Image")));
+			this->pictureBoxHero->Location = System::Drawing::Point(559, 84);
+			this->pictureBoxHero->Name = L"pictureBoxHero";
+			this->pictureBoxHero->Size = System::Drawing::Size(501, 396);
+			this->pictureBoxHero->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBoxHero->TabIndex = 9;
+			this->pictureBoxHero->TabStop = false;
+			// 
+			// lblStandardText
+			// 
+			this->lblStandardText->AutoSize = true;
+			this->lblStandardText->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(100)), static_cast<System::Int32>(static_cast<System::Byte>(116)),
+				static_cast<System::Int32>(static_cast<System::Byte>(139)));
+			this->lblStandardText->Location = System::Drawing::Point(13, 47);
+			this->lblStandardText->Name = L"lblStandardText";
+			this->lblStandardText->Size = System::Drawing::Size(348, 20);
+			this->lblStandardText->TabIndex = 2;
+			this->lblStandardText->Text = L"Affordable and reliable delivery for regular parcels.";
 			// 
 			// lblStandardTitle
 			// 
@@ -393,33 +383,11 @@ namespace CourrierEase
 			this->lblStandardTitle->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10, System::Drawing::FontStyle::Bold));
 			this->lblStandardTitle->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
 				static_cast<System::Int32>(static_cast<System::Byte>(42)));
-			this->lblStandardTitle->Location = System::Drawing::Point(3, 25);
+			this->lblStandardTitle->Location = System::Drawing::Point(13, 15);
 			this->lblStandardTitle->Name = L"lblStandardTitle";
 			this->lblStandardTitle->Size = System::Drawing::Size(156, 23);
 			this->lblStandardTitle->TabIndex = 1;
 			this->lblStandardTitle->Text = L"Standard Delivery";
-			// 
-			// lblStandardText
-			// 
-			this->lblStandardText->AutoSize = true;
-			this->lblStandardText->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(100)), static_cast<System::Int32>(static_cast<System::Byte>(116)),
-				static_cast<System::Int32>(static_cast<System::Byte>(139)));
-			this->lblStandardText->Location = System::Drawing::Point(3, 50);
-			this->lblStandardText->Name = L"lblStandardText";
-			this->lblStandardText->Size = System::Drawing::Size(348, 20);
-			this->lblStandardText->TabIndex = 2;
-			this->lblStandardText->Text = L"Affordable and reliable delivery for regular parcels.";
-			// 
-			// pnlExpress
-			// 
-			this->pnlExpress->BackColor = System::Drawing::Color::White;
-			this->pnlExpress->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->pnlExpress->Controls->Add(this->lblExpressTitle);
-			this->pnlExpress->Controls->Add(this->lblExpressText);
-			this->pnlExpress->Location = System::Drawing::Point(530, 550);
-			this->pnlExpress->Name = L"pnlExpress";
-			this->pnlExpress->Size = System::Drawing::Size(470, 100);
-			this->pnlExpress->TabIndex = 8;
 			// 
 			// lblExpressTitle
 			// 
@@ -427,7 +395,7 @@ namespace CourrierEase
 			this->lblExpressTitle->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10, System::Drawing::FontStyle::Bold));
 			this->lblExpressTitle->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
 				static_cast<System::Int32>(static_cast<System::Byte>(42)));
-			this->lblExpressTitle->Location = System::Drawing::Point(3, 25);
+			this->lblExpressTitle->Location = System::Drawing::Point(13, 15);
 			this->lblExpressTitle->Name = L"lblExpressTitle";
 			this->lblExpressTitle->Size = System::Drawing::Size(141, 23);
 			this->lblExpressTitle->TabIndex = 1;
@@ -438,41 +406,59 @@ namespace CourrierEase
 			this->lblExpressText->AutoSize = true;
 			this->lblExpressText->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(100)), static_cast<System::Int32>(static_cast<System::Byte>(116)),
 				static_cast<System::Int32>(static_cast<System::Byte>(139)));
-			this->lblExpressText->Location = System::Drawing::Point(3, 50);
+			this->lblExpressText->Location = System::Drawing::Point(13, 47);
 			this->lblExpressText->Name = L"lblExpressText";
 			this->lblExpressText->Size = System::Drawing::Size(284, 20);
 			this->lblExpressText->TabIndex = 2;
 			this->lblExpressText->Text = L"Faster delivery when your parcel is urgent.";
 			// 
-			// pictureBoxHero
+			// pictureBox1
 			// 
-			this->pictureBoxHero->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBoxHero.Image")));
-			this->pictureBoxHero->Location = System::Drawing::Point(706, 84);
-			this->pictureBoxHero->Name = L"pictureBoxHero";
-			this->pictureBoxHero->Size = System::Drawing::Size(354, 271);
-			this->pictureBoxHero->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			this->pictureBoxHero->TabIndex = 9;
-			this->pictureBoxHero->TabStop = false;
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(22, 490);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(280, 198);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox1->TabIndex = 10;
+			this->pictureBox1->TabStop = false;
+			// 
+			// panel1
+			// 
+			this->panel1->BackColor = System::Drawing::Color::Lavender;
+			this->panel1->Controls->Add(this->lblStandardTitle);
+			this->panel1->Controls->Add(this->lblStandardText);
+			this->panel1->Location = System::Drawing::Point(308, 564);
+			this->panel1->Name = L"panel1";
+			this->panel1->Size = System::Drawing::Size(371, 84);
+			this->panel1->TabIndex = 11;
+			// 
+			// panel2
+			// 
+			this->panel2->BackColor = System::Drawing::Color::LavenderBlush;
+			this->panel2->Controls->Add(this->lblExpressText);
+			this->panel2->Controls->Add(this->lblExpressTitle);
+			this->panel2->Location = System::Drawing::Point(685, 564);
+			this->panel2->Name = L"panel2";
+			this->panel2->Size = System::Drawing::Size(375, 84);
+			this->panel2->TabIndex = 12;
 			// 
 			// MainForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(248)), static_cast<System::Int32>(static_cast<System::Byte>(250)),
-				static_cast<System::Int32>(static_cast<System::Byte>(252)));
+			this->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->ClientSize = System::Drawing::Size(1100, 700);
+			this->Controls->Add(this->panel2);
+			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->pictureBoxHero);
 			this->Controls->Add(this->pnlHeader);
-			this->Controls->Add(this->lblTruckText);
-			this->Controls->Add(this->lblBadge);
 			this->Controls->Add(this->lblHeroTitle);
 			this->Controls->Add(this->lblHeroText);
 			this->Controls->Add(this->btnBookParcel);
 			this->Controls->Add(this->btnTrackHero);
 			this->Controls->Add(this->pnlTracking);
 			this->Controls->Add(this->lblServicesTitle);
-			this->Controls->Add(this->pnlStandard);
-			this->Controls->Add(this->pnlExpress);
+			this->Controls->Add(this->panel1);
 			this->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9));
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->MaximizeBox = false;
@@ -483,11 +469,12 @@ namespace CourrierEase
 			this->pnlHeader->PerformLayout();
 			this->pnlTracking->ResumeLayout(false);
 			this->pnlTracking->PerformLayout();
-			this->pnlStandard->ResumeLayout(false);
-			this->pnlStandard->PerformLayout();
-			this->pnlExpress->ResumeLayout(false);
-			this->pnlExpress->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBoxHero))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
+			this->panel1->ResumeLayout(false);
+			this->panel1->PerformLayout();
+			this->panel2->ResumeLayout(false);
+			this->panel2->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
