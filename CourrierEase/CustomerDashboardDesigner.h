@@ -753,12 +753,36 @@ namespace CourrierEase {
 			System::Windows::Forms::DialogResult result =
 				bookForm->ShowDialog(this);
 
+			delete bookForm;
+
 			if (
 				result ==
 				System::Windows::Forms::DialogResult::Abort
 				)
 			{
 				this->Close();
+				return;
+			}
+
+			if (
+				result ==
+				System::Windows::Forms::DialogResult::Retry
+				)
+			{
+				OpenMyDeliveries();
+				return;
+			}
+
+			if (
+				result ==
+				System::Windows::Forms::DialogResult::Ignore
+				)
+			{
+				Profile_Click(
+					nullptr,
+					System::EventArgs::Empty
+				);
+
 				return;
 			}
 
@@ -810,6 +834,8 @@ namespace CourrierEase {
 			System::Windows::Forms::DialogResult result =
 				deliveriesForm->ShowDialog(this);
 
+			delete deliveriesForm;
+
 			if (
 				result ==
 				System::Windows::Forms::DialogResult::Abort
@@ -825,6 +851,19 @@ namespace CourrierEase {
 				)
 			{
 				BookParcel_Click(
+					nullptr,
+					System::EventArgs::Empty
+				);
+
+				return;
+			}
+
+			if (
+				result ==
+				System::Windows::Forms::DialogResult::Ignore
+				)
+			{
+				Profile_Click(
 					nullptr,
 					System::EventArgs::Empty
 				);

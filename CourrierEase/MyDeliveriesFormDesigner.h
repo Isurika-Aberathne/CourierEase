@@ -1340,7 +1340,7 @@ namespace CourrierEase
 
 		void UpdateActionButtons()
 		{
-			for each(
+			for each (
 				System::Windows::Forms::
 				DataGridViewRow ^ row
 				in this->dgvDeliveries->Rows)
@@ -1775,14 +1775,11 @@ namespace CourrierEase
 			System::Object^ sender,
 			System::EventArgs^ e)
 		{
-			System::Windows::Forms::
-				MessageBox::Show(
-					L"My Profile navigation will be connected with the dashboard.",
-					L"CourierEase",
-					System::Windows::Forms::
-					MessageBoxButtons::OK,
-					System::Windows::Forms::
-					MessageBoxIcon::Information);
+			this->DialogResult =
+				System::Windows::Forms::
+				DialogResult::Ignore;
+
+			this->Close();
 		}
 
 		void Logout_Click(

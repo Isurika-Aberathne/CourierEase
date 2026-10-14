@@ -1257,6 +1257,10 @@ namespace CourrierEase {
 			System::Object^ sender,
 			System::EventArgs^ e)
 		{
+			this->DialogResult =
+				System::Windows::Forms::DialogResult::Ignore;
+
+			this->Close();
 		}
 
 		System::Void btnLogout_Click(
@@ -1283,6 +1287,10 @@ namespace CourrierEase {
 			System::Object^ sender,
 			System::EventArgs^ e)
 		{
+			this->DialogResult =
+				System::Windows::Forms::DialogResult::Retry;
+
+			this->Close();
 		}
 	};
 }
